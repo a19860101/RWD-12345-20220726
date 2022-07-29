@@ -7,7 +7,16 @@
     <title>Document</title>
     <style>
         body {
-            background-image: linear-gradient(red 33%,blue 33%, blue 66%,yellow 66%);
+            /* background-image: linear-gradient(red 33%,blue 33%, blue 66%,yellow 66%); */
+            /* background-image: repeating-linear-gradient(45deg, red 0,red 10px, orange 10px,orange 20px,purple 20px , purple 30px); */
+            background-image: 
+                repeating-linear-gradient(45deg, #4f008f83 0,#4f008f83 10px, transparent 10px,transparent 20px),
+                repeating-linear-gradient(-45deg, #ffa60088 0,#ffa60088 10px, transparent 10px,transparent 20px),
+                url('https://picsum.photos/id/83/1600/1000')
+                ;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;    
             background-attachment: fixed;
         }
     </style>
