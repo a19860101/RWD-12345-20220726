@@ -7,17 +7,32 @@
     <title>Document</title>
     <style>
         .box {
-            width: 100%;
+            width: 200px;
             height: 10rem;
             background-color: #098;
+
+            /* overflow: auto; */
+            /* hidden, scroll,auto */
+            overflow-y: scroll;
         }
         /* 
             高度在預設的狀態下，無法使用%當作單位。
             若要使用%，必須父層有高度單位存在
         */
+
+        .box2 {
+            width: 200px;
+            background-color: crimson;
+        }
     </style>
 </head>
 <body>
-    <div class="box"></div>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio consequatur cumque, delectus necessitatibus excepturi rerum iste earum! Facere, illo vero quaerat necessitatibus reprehenderit magni neque natus, harum, debitis ipsa consequatur?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio consequatur cumque, delectus necessitatibus excepturi rerum iste earum! Facere, illo vero quaerat necessitatibus reprehenderit magni neque natus, harum, debitis ipsa consequatur?
+    </div>
+    <div class="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, neque aut optio sunt quis aperiam minima dolores quisquam officia? Aliquam nihil mollitia dolorum doloremque, odit, repudiandae, explicabo aut ipsa suscipit nostrum dolore. Provident tenetur nisi rerum perspiciatis adipisci eos. Officia, alias itaque ducimus a commodi reprehenderit corporis? Fugiat beatae consequuntur excepturi cumque rem veniam est quis repellendus architecto modi, possimus corrupti officiis reiciendis debitis alias, amet earum aut doloremque voluptatum odit molestiae blanditiis illo! Maxime architecto enim pariatur et libero dolor exercitationem ducimus minus alias distinctio, sit, blanditiis animi, itaque minima odio reiciendis cum nulla illo dolores non odit necessitatibus.
+    </div>
 </body>
 </html>
