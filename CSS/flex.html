@@ -12,9 +12,17 @@
         .container {
             width: 1200px;
             margin-inline: auto;
+            background-color: #ccc;
         
             display: flex;
-            background-color: #ccc;
+            /* flex-direction: row; */
+            /* row, column */
+            /* flex-wrap: wrap; */
+            /* wrap, no-wrap */
+            /*
+                flex-wrap開啟時flex-shrink(壓縮)會失效
+             */
+            flex-flow: row wrap;
         }
         .box {
             width: 400px;
@@ -25,13 +33,40 @@
 <body>
     <div class="container">
         <div class="box">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio culpa quidem ducimus repellendus deleniti? Consequuntur nisi ex, voluptatibus, suscipit beatae consequatur doloremque dolorum dolor nulla provident quaerat maiores omnis ducimus?
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque repellendus delectus ex consequatur ipsum beatae quae, eius nisi maxime reprehenderit ducimus dolores quisquam voluptates adipisci, expedita vitae rerum ipsam libero!
+            </p>
         </div>
         <div class="box">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus perferendis quos soluta aliquid labore provident aperiam similique tempora esse ducimus.
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos tempora beatae iusto quod, officiis consectetur libero tenetur similique dolores quae.
+            </p>
         </div>
         <div class="box">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, repudiandae. Iure consequuntur, ullam temporibus animi facere voluptatum placeat dolorem esse modi blanditiis. Suscipit quod sapiente libero deleniti dolores nesciunt hic error numquam optio. Eum amet officia quos quod consequatur dolorum et unde modi distinctio provident, officiis porro cum fuga est?
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus amet asperiores, eos odit, unde nobis excepturi, error deleniti expedita pariatur consequuntur! Omnis suscipit quasi consequatur doloremque possimus autem aliquam veniam. Ratione sint similique earum porro, maiores, pariatur obcaecati non magni qui nihil, id facere omnis? Voluptate eum doloribus rerum quaerat.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 4</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque repellendus delectus ex consequatur ipsum beatae quae, eius nisi maxime reprehenderit ducimus dolores quisquam voluptates adipisci, expedita vitae rerum ipsam libero!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 5</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos tempora beatae iusto quod, officiis consectetur libero tenetur similique dolores quae.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 6</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus amet asperiores, eos odit, unde nobis excepturi, error deleniti expedita pariatur consequuntur! Omnis suscipit quasi consequatur doloremque possimus autem aliquam veniam. Ratione sint similique earum porro, maiores, pariatur obcaecati non magni qui nihil, id facere omnis? Voluptate eum doloribus rerum quaerat.
+            </p>
         </div>
     </div>
 </body>
