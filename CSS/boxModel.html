@@ -64,15 +64,38 @@
             padding-block-start:;
             padding-block-end:;
             padding-block: 200px;
+
+            /* border-width: 5px; */
+            /* border-style: solid; */
+            /* solid, double, dotted, dashed
+                inset, outset, groove, ridge
+            */
+            /* border-color: orange */
+
+            /* border-left-color: ; */
+            /* border-left-width: ; */
+            /* border-left-style: ; */
+
+            /* border-left:red  solid  10px; */
+            /* border-top:red  solid  10px; */
+
+            border: 10px solid greenyellow
         }
         /* 
             高度在預設的狀態下，無法使用%當作單位。
             若要使用%，必須父層有高度單位存在
         */
+        /* 
+            預設情況下
+            總寬度 = width + padding + border
+            總高度 = height + padding + border
+        */
 
         .box2 {
             width: 200px;
             background-color: crimson;
+            border: 15px solid #0af;
+            padding: 30px;
         }
         .rtl {
             direction: rtl;
