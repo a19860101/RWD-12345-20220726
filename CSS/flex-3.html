@@ -10,31 +10,20 @@
             box-sizing: border-box;
         }
         .container {
-            width: 1440px;
-            margin-inline: auto;
-            background-color: #ccc;
+            width: 1200px;
             display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-
-            justify-content: center;
-            /* 
-                flex-start, flex-end , center
-                space-between, space-around, sapce-evenly
-            */
+            background-color: #ccc;
+            margin-inline: auto;
 
             align-items: center;
-            /* 
-                flex-start, flex-end , center
-                baseline, stretch
-            */
         }
         .box {
-            width: 240px;
+            width: 300px;
             padding: 15px;
-            text-align: justify;
-
-            /* background-color: #098; */
+        }
+        .box:nth-of-type(4){
+            background-color: #fa0;
+            align-self: stretch;
         }
     </style>
 </head>
