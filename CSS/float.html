@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+            background-color: #ccc;
+
+            /* overflow: auto; */
+            display: flow-root;
+            /* height: 300px; */
+        }
+        .box {
+            width: 400px;
+            padding: 20px;
+            /* background-color: #0ab; */
+
+            float: left;
+        }
+        /* 
+            缺點:
+            當子元素都是float時，父元素的高度會歸零
+
+            解法一:
+            設定overflow
+            解法二:
+            設定display:flow-root
+            解法三:
+            設定高度
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio culpa quidem ducimus repellendus deleniti? Consequuntur nisi ex, voluptatibus, suscipit beatae consequatur doloremque dolorum dolor nulla provident quaerat maiores omnis ducimus?
+        </div>
+        <div class="box">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus perferendis quos soluta aliquid labore provident aperiam similique tempora esse ducimus.
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, repudiandae. Iure consequuntur, ullam temporibus animi facere voluptatum placeat dolorem esse modi blanditiis. Suscipit quod sapiente libero deleniti dolores nesciunt hic error numquam optio. Eum amet officia quos quod consequatur dolorum et unde modi distinctio provident, officiis porro cum fuga est?
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+            background-color: #ccc;
+
+            font-size: 0;
+        }
+        .box {
+            width: 400px;
+            background-color: #098;
+            display: inline-block;  
+            padding: 20px; 
+            font-size: 16px;
+            vertical-align: top;
+        }
+        /* 
+            缺點
+            inline-block的元素並排時，會有4px不等的空系出現
+            解法步驟:
+            1. 將父元素的font-size設定為0
+            2. 還原自己的font-size
+            3. 設定vertical-align
+        
+        */
+    </style>
+</head>
+<body>
+    <!-- 
+        inline vs block
+
+        1. inline沒有width與height
+        2. 沒有上下的border, margin, padding
+     -->
+     <div class="container">
+        <div class="box">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio culpa quidem ducimus repellendus deleniti? Consequuntur nisi ex, voluptatibus, suscipit beatae consequatur doloremque dolorum dolor nulla provident quaerat maiores omnis ducimus?
+        </div>
+        <div class="box">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus perferendis quos soluta aliquid labore provident aperiam similique tempora esse ducimus.
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, repudiandae. Iure consequuntur, ullam temporibus animi facere voluptatum placeat dolorem esse modi blanditiis. Suscipit quod sapiente libero deleniti dolores nesciunt hic error numquam optio. Eum amet officia quos quod consequatur dolorum et unde modi distinctio provident, officiis porro cum fuga est?
+        </div>
+    </div>
+</body>
+</html>
