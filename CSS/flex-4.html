@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+            background-color: #ccc;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .box {
+            flex-basis: 200px;
+        }
+        /* 
+            flex-basis
+            flex-direction為row時，flex-basis表示寬度
+            flex-direction為column時，flex-basis表示高度
+        
+        */
+        .box:nth-of-type(1){
+            background-color: #098;
+            flex-grow: 3;
+        }
+        .box:nth-of-type(2){
+            background-color: #29f;
+            flex-grow: 4
+        }
+        .box:nth-of-type(3){
+            background-color: #a08;
+            flex-grow: 1;
+        }
+        .box:nth-of-type(4){
+            background-color: #fa8;
+            flex-grow: 2;
+        }
+    </style>    
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, minus error? Sed ratione quasi iste! Nemo sapiente cupiditate, dolores magnam voluptatum, quia similique veniam at nulla doloremque adipisci cum eaque.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, minus error? Sed ratione quasi iste! Nemo sapiente cupiditate, dolores magnam voluptatum, quia similique veniam at nulla doloremque adipisci cum eaque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, minus error? Sed ratione quasi iste! Nemo sapiente cupiditate, dolores magnam voluptatum, quia similique veniam at nulla doloremque adipisci cum eaque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, minus error? Sed ratione quasi iste! Nemo sapiente cupiditate, dolores magnam voluptatum, quia similique veniam at nulla doloremque adipisci cum eaque.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, minus error? Sed ratione quasi iste! Nemo sapiente cupiditate, dolores magnam voluptatum, quia similique veniam at nulla doloremque adipisci cum eaque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, minus error? Sed ratione quasi iste! Nemo sapiente cupiditate, dolores magnam voluptatum, quia similique veniam at nulla doloremque adipisci cum eaque.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 4</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, minus error? Sed ratione quasi iste! Nemo sapiente cupiditate, dolores magnam voluptatum, quia similique veniam at nulla doloremque adipisci cum eaque.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
