@@ -23,18 +23,45 @@
             height: 50px;
         }
         nav a {
-            color: #eee;
             text-decoration: none;
+            padding-inline:10px;
+            color: #eee;
+
+        }
+        .nav-logo {
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .nav-link {
             padding-inline: 10px;
         }
         .nav-link:hover {
             color: #fa0;
         }
+        /* header */
+        header {
+            background-image: url('https://picsum.photos/id/82/1600/1000');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            padding-block: 300px;
+            text-align: center;
+        }
+        .header-content {
+            width: 600px;
+            margin-inline: auto;
+            background-color: rgba(0, 0, 0, 0.427);
+            color: #eee;
+            padding: 30px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
     <nav>
-        <a href="#">Logo</a>
+        <a href="#" class="nav-logo">Logo</a>
         <div>
             <a href="#" class="nav-link">Menu</a>
             <a href="#" class="nav-link">Menu</a>
@@ -42,5 +69,14 @@
             <a href="#" class="nav-link">Menu</a>
         </div>
     </nav>
+    <header>
+        <div class="header-content">
+            <h1>HELLO FLEX!!!</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis odit voluptatem cupiditate.
+            </p>
+            <a href="#">More</a>
+        </div>
+    </header>
 </body>
 </html>
