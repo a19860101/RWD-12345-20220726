@@ -169,3 +169,10 @@ section {
 .form-btn input {
     width: 100%;
 }
+
+footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 15px;
+}
