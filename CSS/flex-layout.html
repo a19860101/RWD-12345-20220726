@@ -50,12 +50,43 @@
             text-align: center;
         }
         .header-content {
-            width: 600px;
+            width: 80%;
+            max-width: 800px;
             margin-inline: auto;
-            background-color: rgba(0, 0, 0, 0.427);
+            background-color: rgba(0, 0, 0, 0.6);
             color: #eee;
             padding: 30px;
             border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .header-content h1{
+            font-size: 4rem;
+        }
+        .header-content p {
+            font-size: 1.5rem;
+            margin-block: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 6px;
+        }
+        .btn-light {
+            background-color: #cfcfcf;
+            color: #222;
+        }
+        .btn-blue {
+            background-color: #2dafff;
+            color: #222;
+        }
+        .btn-red {
+            background-color: crimson;
+            color: #eee;
+        }
+        .btn-red:hover {
+            background-color: #ec4365;
         }
     </style>
 </head>
@@ -75,7 +106,7 @@
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis odit voluptatem cupiditate.
             </p>
-            <a href="#">More</a>
+            <a href="#" class="btn btn-red">More</a>
         </div>
     </header>
 </body>
