@@ -5,90 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Segoe UI','微軟正黑體','sans-serif';
-        }
-        nav {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #222;
-            height: 50px;
-        }
-        nav a {
-            text-decoration: none;
-            padding-inline:10px;
-            color: #eee;
-
-        }
-        .nav-logo {
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .nav-link {
-            padding-inline: 10px;
-        }
-        .nav-link:hover {
-            color: #fa0;
-        }
-        /* header */
-        header {
-            background-image: url('https://picsum.photos/id/82/1600/1000');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-
-            padding-block: 300px;
-            text-align: center;
-        }
-        .header-content {
-            width: 80%;
-            max-width: 800px;
-            margin-inline: auto;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: #eee;
-            padding: 30px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-        }
-        .header-content h1{
-            font-size: 4rem;
-        }
-        .header-content p {
-            font-size: 1.5rem;
-            margin-block: 20px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            text-decoration: none;
-            font-size: 16px;
-            border-radius: 6px;
-        }
-        .btn-light {
-            background-color: #cfcfcf;
-            color: #222;
-        }
-        .btn-blue {
-            background-color: #2dafff;
-            color: #222;
-        }
-        .btn-red {
-            background-color: crimson;
-            color: #eee;
-        }
-        .btn-red:hover {
-            background-color: #ec4365;
-        }
-    </style>
+    <link rel="stylesheet" href="layout.css">
 </head>
 <body>
     <nav>
@@ -109,5 +26,33 @@
             <a href="#" class="btn btn-red">More</a>
         </div>
     </header>
+    <section id="about">
+        <div class="container">
+            <div class="about-title">
+                <h2>About</h2>
+            </div>
+            <div class="about-col">
+                <h3>title</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam esse commodi debitis maiores quo itaque totam magnam possimus mollitia. Quibusdam?
+                </p>
+                <a href="#" class="btn btn-light">Read</a>
+            </div>
+            <div class="about-col">
+                <h3>title</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam esse commodi debitis maiores quo itaque totam magnam possimus mollitia. Quibusdam?
+                </p>
+                <a href="#" class="btn btn-light">Read</a>
+            </div>
+            <div class="about-col">
+                <h3>title</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam esse commodi debitis maiores quo itaque totam magnam possimus mollitia. Quibusdam?
+                </p>
+                <a href="#" class="btn btn-light">Read</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
