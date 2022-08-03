@@ -16,15 +16,21 @@
                 width 1s,
                 height 2s; */
 
-            transition-property: width,height,background-color;
+            /* transition-property: width,height,background-color;
             transition-duration: 1s;
             transition-delay: 0s,1s,2s;
-            transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out; */
+
+            /* transition: 
+                width 1s 0s,
+                height 1s 1s, 
+                background-color 1s 2s; */
+
+            transition: 1s;
         }
         .box:hover {
             background-color: #fa0;
-            width: 500px;
-            height: 300px;
+            transform: scale(.5) rotate(90deg)
         }
     </style>
 </head>
