@@ -40,6 +40,31 @@
         /* 
             top,left,right,bottom,z-index
         */
+        .absolute {
+            width: 200px;
+            height: 200px;
+            background-color: #ffee6a;
+
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .container {
+            width: 800px;
+            height: 600px;
+            background-color: #ffdada;
+
+            position: relative;
+        }
+        .absolute-2 {
+            width: 200px;
+            height: 200px;
+            background-color: #abc;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
     </style>
 </head>
 <body>
@@ -55,5 +80,9 @@
     <div class="relative-2"></div>
     <div class="static"></div>
     <div class="static-2"></div>
+    <div class="absolute"></div>
+    <div class="container">
+        <div class="absolute-2"></div>
+    </div>
 </body>
 </html>
