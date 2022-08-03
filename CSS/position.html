@@ -48,6 +48,7 @@
             position: absolute;
             bottom: 0;
             right: 0;
+            z-index: 10;
         }
         .container {
             width: 800px;
@@ -64,6 +65,16 @@
             position: absolute;
             top: 0;
             right: 0;
+        }
+        .fixed {
+            width: 200px;
+            height: 200px;
+            background-color: #fa0;
+            position: fixed;
+
+            bottom: 0;
+            right: 100px;
+            z-index: 999;
         }
     </style>
 </head>
@@ -84,5 +95,6 @@
     <div class="container">
         <div class="absolute-2"></div>
     </div>
+    <div class="fixed"></div>
 </body>
 </html>
