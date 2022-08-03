@@ -11,10 +11,15 @@
             height: 200px;
             background-color: #098;
 
-            transition: 
+            /* transition: 
                 background-color 500ms,
                 width 1s,
-                height 2s;
+                height 2s; */
+
+            transition-property: width,height,background-color;
+            transition-duration: 1s;
+            transition-delay: 0s,1s,2s;
+            transition-timing-function: ease;
         }
         .box:hover {
             background-color: #fa0;
