@@ -11,13 +11,29 @@
             height: 200px;
             background-color: #ffc30f;
 
-            animation: fadeIn 3s;
+            /* animation: go 3s; */
+            animation-name: a1;
+            animation-duration: 1s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;/*infinite*/
+            animation-fill-mode: forwards;
+            animation-direction: alternate-reverse;
+            /* normal, reverse, alternate, alternate-reverse */
+            animation-timing-function: linear;
+
+            /* animation:a1 1s 0s infinite alternate linear; */
+        }
+        @keyframes a1 {
+            to {
+                transform: translate(600px);
+            }
         }
         @keyframes go {
-            from {}
-            to {
-                transform: translateX(600px);
-            }
+            0% {}
+            25% {transform: translate(600px,0);}
+            50% {transform: translate(600px,600px);}
+            75% {transform: translate(0,600px);}
+            100% {transform: translate(0,0);}
         }
         @keyframes fadeIn {
             from {
