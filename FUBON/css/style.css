@@ -50,3 +50,44 @@ nav {
     background-color: var(--orange);
     color: #fff;
 }
+
+/* #about */
+#about {
+    background-color: var(--lightblue);
+    padding-block: 100px;
+}
+#about p{
+    font-size: 2rem;
+    margin-block: 30px;
+    font-weight: bold;
+}
+.about-content {
+    background-color: #fff;
+    padding-top: 90px;
+    padding-bottom: 60px;
+    justify-content: center;
+    text-align: center;
+    padding-inline: 80px;
+
+    box-shadow:0 5px 10px 0 rgb(0 0 0 / .1)
+}
+#about h3 {
+    font-size: 1.5rem;
+}
+#about .number {
+    font-size: 4rem;
+    color:var(--teal);
+    font-weight: bold;
+    margin-block: 20px;
+}
+#about .unit {
+    font-size: 2rem;
+}
+#about .caption {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+#about .other {
+    color: gray;
+    margin-top: 30px;
+}
