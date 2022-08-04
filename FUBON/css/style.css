@@ -16,7 +16,7 @@ nav {
     transition: color 400ms;
 }
 .nav-link:hover {
-    color: #1180ff;
+    color: var(--blue);
 }
 .nav-logo {
     margin-inline: 10px;
@@ -36,12 +36,17 @@ nav {
     font-weight: bold;
 }
 .btn-white {
-   color: #1180ff;
-    border: 1px solid #1180ff;
+   color: var(--blue);
+    border: 1px solid var(--blue);
     background-color: #fff;
 }
 .btn-blue {
-    border: 1px solid #1180ff;
-    background-color: #1180ff;
+    border: 1px solid var(--blue);
+    background-color: var(--blue);
+    color: #fff;
+}
+.btn-orange {
+    border: 1px solid var(--orange);
+    background-color: var(--orange);
     color: #fff;
 }

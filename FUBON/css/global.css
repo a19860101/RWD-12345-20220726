@@ -1,3 +1,7 @@
+:root {
+    --blue:#196cdf;
+    --orange: #fa0
+}
 * {
     box-sizing: border-box;
     font-family: 'Segoe UI','微軟正黑體','sans-serif';
