@@ -93,12 +93,12 @@ header {
     background-color: #ec4365;
 }
 
-.container {
+/* .container {
     width: 1200px;
     margin-inline: auto;
     display: flex;
     flex-wrap: wrap;
-}
+} */
 section {
     padding-block: 150px;
 }
@@ -153,7 +153,6 @@ section {
 
 /* contact */
 .contact-content {
-    flex: 0 0 60%;
     margin-inline: auto;
 }
 .form-group {
