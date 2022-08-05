@@ -114,3 +114,54 @@ nav {
     color: gray;
     margin-top: 30px;
 }
+/* etf */
+#etf .bg {
+
+    background-image: 
+        linear-gradient(to right,rgba(34, 111, 206, 0.9) 70%,rgba(34, 111, 206, 0.6)),
+        url('https://picsum.photos/id/98/1600/800')
+    ;
+}
+#etf {
+    background-color: var(--lightblue);
+    padding-block: 100px;
+    position: relative;
+}
+#etf h2 {
+    color: #fff;
+}
+#etf p{
+    font-size: 2rem;
+    margin-block: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+.etf-content {
+    background-color: #fff;
+    padding-top: 90px;
+    padding-bottom: 60px;
+    justify-content: center;
+    padding-inline: 80px;
+
+    box-shadow:0 5px 10px 0 rgb(0 0 0 / .1)
+}
+.etf-link {
+    display: block;
+    position: relative;
+}
+.etf-link-caption {
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    font-weight: bold;
+    background-color: rgb(255 255 255 / .6);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+}
+.etf-link-caption span {
+    font-size: 2rem;
+    color: var(--teal);
+}
+.etf-link-caption small {
+    font-size: 1.4rem;
+}
