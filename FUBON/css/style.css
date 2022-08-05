@@ -116,7 +116,6 @@ nav {
 }
 /* etf */
 #etf .bg {
-
     background-image: 
         linear-gradient(to right,rgba(34, 111, 206, 0.9) 70%,rgba(34, 111, 206, 0.6)),
         url('https://picsum.photos/id/98/1600/800')
@@ -142,11 +141,9 @@ nav {
     padding-bottom: 30px;
     justify-content: center;
     padding-inline: 80px;
-
     box-shadow:0 5px 10px 0 rgb(0 0 0 / .1);
     align-items: center;
     position: relative;
-
     margin-bottom: 200px;
 }
 .etf-link {
@@ -173,19 +170,16 @@ nav {
 #etf .col-8 {
     padding-left: 100px;
 }
-.etf-list-1 {
+[class^="etf-list"]{
     font-size: 1.4rem;
     line-height: 3rem;
     font-weight: bold;
     list-style: square;
     list-style-position: inside;
-    
 }
 .etf-list-1 li::marker {
     color: var(--teal);
-   
 }
-
 #etf hr {
     margin-top: 30px;
     margin-bottom: 40px;
@@ -202,7 +196,7 @@ nav {
 .etf-other {
     color: gray;
 }
-.etf-btn-1 {
+[class^="etf-btn"]{
     display: inline-block;
     padding-inline: 20px;
     padding-block: 15px;
@@ -216,6 +210,9 @@ nav {
     right: 0;
     transform: translate(100px,100%);
 }
+.etf-btn-1 {
+    background-color: var(--teal);
+}
 .etf-btn-1:hover {
     background-color: #02aa93;
 }
@@ -228,33 +225,12 @@ nav {
 .etf-link-caption-2 span{
     color: var(--blue);
     font-size: 2rem;
-
-}
-.etf-list-2 {
-    font-size: 1.4rem;
-    line-height: 3rem;
-    font-weight: bold;
-    list-style: square;
-    list-style-position: inside;
-    
 }
 .etf-list-2 li::marker {
     color: var(--blue);
-   
 }
 .etf-btn-2 {
-    display: inline-block;
-    padding-inline: 20px;
-    padding-block: 15px;
     background-color: var(--blue);
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.4rem;
-    transition: background-color 400ms;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translate(100px,100%);
 }
 .etf-btn-2:hover {
     background-color: #0267aa;
@@ -262,4 +238,10 @@ nav {
 .etf-info-2 span {
     font-size: 3rem;
     color: var(--blue);
+}
+.etf-btn-compare{
+    background-color: var(--blue);
+    position: initial;
+    transform: initial;
+    margin-inline:auto;
 }
