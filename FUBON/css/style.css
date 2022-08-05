@@ -245,3 +245,44 @@ nav {
     transform: initial;
     margin-inline:auto;
 }
+/* school */
+#school {
+    padding-block: 100px;
+}
+.section-title {
+    margin-bottom: 50px;
+
+}
+.section-title h2 {
+    text-align: center;
+    color: var(--blue);
+    margin-bottom: 30px;
+}
+.section-title p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.tab-nav {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-inline: auto;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--blue);
+}
+.tab-link {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #818181;
+    font-weight: bold;
+}
+.tab-link.active {
+    color: var(--blue);
+}
+.tab-panel {
+    margin-top: 30px;
+    background-color: #fff;
+    box-shadow:0 5px 10px 5px rgb(0 0 0 / .1);
+}
