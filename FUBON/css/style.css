@@ -285,4 +285,36 @@ nav {
     margin-top: 30px;
     background-color: #fff;
     box-shadow:0 5px 10px 5px rgb(0 0 0 / .1);
+    padding: 50px;
+    display: none;
+}
+.tab-panel.active {
+    display: block;
+}
+#school .content {
+    padding-left: 100px;
+    padding-right: 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+#school .date {
+    color: #818181;
+    margin-bottom: 20px;
+}
+#school .content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+#school .content p {
+    font-size: 1.2rem;
+}
+#school .content a {
+    color: var(--blue);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+#school .more {
+    margin-top: auto;
+    text-align: right
 }
