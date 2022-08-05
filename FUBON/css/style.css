@@ -138,12 +138,13 @@ nav {
 }
 .etf-content {
     background-color: #fff;
-    padding-top: 90px;
-    padding-bottom: 60px;
+    padding-top: 60px;
+    padding-bottom: 30px;
     justify-content: center;
     padding-inline: 80px;
 
-    box-shadow:0 5px 10px 0 rgb(0 0 0 / .1)
+    box-shadow:0 5px 10px 0 rgb(0 0 0 / .1);
+    align-items: center;
 }
 .etf-link {
     display: block;
@@ -165,3 +166,36 @@ nav {
 .etf-link-caption small {
     font-size: 1.4rem;
 }
+
+#etf .col-8 {
+    padding-left: 100px;
+}
+.etf-list-1 li {
+    font-size: 1.4rem;
+    line-height: 3rem;
+    font-weight: bold;
+    list-style: square
+}
+.etf-list-1 li::marker {
+    color: var(--teal);
+   
+}
+
+#etf hr {
+    border-bottom:1px solid var(--teal);
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.etf-info {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.etf-info span {
+    font-size: 3rem;
+    color: var(--teal);
+}
+.etf-other {
+    color: gray;
+}
+
