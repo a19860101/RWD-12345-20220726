@@ -323,3 +323,31 @@ nav {
     background-color: var(--lightblue);
     padding-block: 100px;
 }
+.text-muted {
+    font-size: .9rem;
+    color: #818181;
+}
+.text-lg {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.text-teal-xl {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--teal);   
+}
+.m-1 {
+    margin: calc(1 * 0.5rem);
+}
+.m-2 {
+    margin: calc(2 * 0.5rem);
+}
+.mb-1 {
+    margin-bottom: calc(1 * 0.5rem);
+}
+.mb-2 {
+    margin-bottom: calc(2 * 0.5rem);
+}
+.mb-3 {
+    margin-bottom: calc(3 * 0.5rem);
+}
