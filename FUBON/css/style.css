@@ -318,3 +318,8 @@ nav {
     margin-top: auto;
     text-align: right
 }
+/* recommend */
+#recommend {
+    background-color: var(--lightblue);
+    padding-block: 100px;
+}
