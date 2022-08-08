@@ -323,6 +323,18 @@ nav {
     background-color: var(--lightblue);
     padding-block: 100px;
 }
+/* award */
+#award {
+    position: relative;
+}
+#award .bg {
+    background-image: 
+        linear-gradient(to right,rgba(34, 111, 206, 0.9) 70%,rgba(34, 111, 206, 0.6)),
+        url('https://picsum.photos/id/98/1600/800')
+    ;
+}
+
+/* global */
 .text-muted {
     font-size: .9rem;
     color: #818181;
@@ -415,6 +427,9 @@ nav {
 .border-right {
     border-right: 1px solid var(--teal);
 }
+.border-bottom {
+    border-bottom: 1px solid #222;
+}
 .border-1 {
     border: 1px solid #000;
 }
@@ -426,4 +441,20 @@ nav {
 }
 .border-teal {
     border-color: var(--teal);
+}
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.bg-white {
+    background-color: #fff;
+}
+.shadow {
+    box-shadow:0 5px 10px 0 rgb(0 0 0 / .1);
+
 }
