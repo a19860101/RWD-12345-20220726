@@ -249,7 +249,7 @@ nav {
 #school {
     padding-block: 100px;
 }
-.section-title {
+/* .section-title {
     margin-bottom: 50px;
 
 }
@@ -262,7 +262,7 @@ nav {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-}
+} */
 .tab-nav {
     width: 600px;
     display: flex;
@@ -327,6 +327,7 @@ nav {
 #award {
     padding-block: 100px;
     position: relative;
+    background-color: var(--lightblue);
 }
 #award .bg {
     background-image: 
@@ -335,6 +336,10 @@ nav {
     ;
 }
 
+/* qa */
+#qa {
+    padding-block: 100px;
+}
 /* global */
 .text-muted {
     font-size: .9rem;
@@ -355,6 +360,9 @@ nav {
 .text-blue {
     color: var(--blue);
 }
+.text-white {
+    color: #fff;
+}
 .m-1 {
     margin: calc(1 * var(--spacing));
 }
@@ -369,6 +377,18 @@ nav {
 }
 .mb-3 {
     margin-bottom: calc(3 * var(--spacing));
+}
+.mb-4 {
+    margin-bottom: calc(4 * var(--spacing));
+}
+.mb-5 {
+    margin-bottom: calc(5 * var(--spacing));
+}
+.mb-6 {
+    margin-bottom: calc(6 * var(--spacing));
+}
+.mb-7 {
+    margin-bottom: calc(7 * var(--spacing));
 }
 .p-0 {
     padding: 0;
