@@ -325,6 +325,7 @@ nav {
 }
 /* award */
 #award {
+    padding-block: 100px;
     position: relative;
 }
 #award .bg {
@@ -369,8 +370,17 @@ nav {
 .mb-3 {
     margin-bottom: calc(3 * var(--spacing));
 }
+.p-0 {
+    padding: 0;
+}
 .p-1 {
     padding: calc(1 * var(--spacing));
+}
+.p-6 {
+    padding: calc(6 * var(--spacing));
+}
+.p-8 {
+    padding: calc(8 * var(--spacing));
 }
 .pl-1 {
     padding-left: calc(1 * var(--spacing));
@@ -386,6 +396,9 @@ nav {
 }
 .pl-5 {
     padding-left: calc(5 * var(--spacing));
+}
+.py-3 {
+    padding-block:calc(3 * var(--spacing));
 }
 .rounded-sm {
     border-radius: 2px;
@@ -457,4 +470,16 @@ nav {
 .shadow {
     box-shadow:0 5px 10px 0 rgb(0 0 0 / .1);
 
+}
+.lh-sm {
+    line-height: 1rem;
+}
+.lh-md {
+    line-height: 1.5rem;
+}
+.lh-lg {
+    line-height: 2rem;
+}
+.lh-xl {
+    line-height: 2.5rem;
 }
