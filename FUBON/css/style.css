@@ -357,6 +357,24 @@ nav {
 .mb-3 {
     margin-bottom: calc(3 * var(--spacing));
 }
+.p-1 {
+    padding: calc(1 * var(--spacing));
+}
+.pl-1 {
+    padding-left: calc(1 * var(--spacing));
+}
+.pl-2 {
+    padding-left: calc(2 * var(--spacing));
+}
+.pl-3 {
+    padding-left: calc(3 * var(--spacing));
+}
+.pl-4 {
+    padding-left: calc(4 * var(--spacing));
+}
+.pl-5 {
+    padding-left: calc(5 * var(--spacing));
+}
 .rounded-sm {
     border-radius: 2px;
 }
@@ -371,4 +389,41 @@ nav {
 }
 .overflow-hidden {
     overflow:hidden;
+}
+
+.align-items-start {
+    align-items: flex-start;
+}
+.align-items-end {
+    align-items: flex-end;
+}
+.align-items-center {
+    align-items: flex-center;
+}
+.justify-start {
+    justify-content: flex-start;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.border-right {
+    border-right: 1px solid var(--teal);
+}
+.border-1 {
+    border: 1px solid #000;
+}
+.border-2 {
+    border: 2px solid #000;
+}
+.border-3 {
+    border: 3px solid #000;
+}
+.border-teal {
+    border-color: var(--teal);
 }
