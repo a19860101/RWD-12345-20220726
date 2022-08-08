@@ -3,6 +3,7 @@
     --lightblue: #e8f8ff;
     --orange: #fa0;
     --teal: #28c3b1;
+    --spacing: .5rem;
 }
 * {
     box-sizing: border-box;
