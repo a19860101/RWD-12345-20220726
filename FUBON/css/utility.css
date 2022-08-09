@@ -203,6 +203,17 @@
 .text-right {
     text-align: right;
 }
+@media(min-width: 960px){
+    .text-md-left {
+        text-align: left;
+    }
+    .text-md-center {
+        text-align: center;
+    }
+    .text-md-right {
+        text-align: right;
+    }
+}
 .bg-white {
     background-color: #fff;
 }
