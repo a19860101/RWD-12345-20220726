@@ -112,6 +112,30 @@
 .p-8 {
     padding: calc(8 * var(--spacing));
 }
+@media(min-width:1200px){
+    .p-lg-0 {
+        padding: 0;
+    }
+    .p-lg-1 {
+        padding: calc(1 * var(--spacing));
+    }
+    .p-lg-2 {
+        padding: calc(2 * var(--spacing));
+    }
+    .p-lg-3 {
+        padding: calc(3 * var(--spacing));
+    }
+    .p-lg-4 {
+        padding: calc(4 * var(--spacing));
+    }
+    .p-lg-6 {
+        padding: calc(6 * var(--spacing));
+    }
+    .p-lg-8 {
+        padding: calc(8 * var(--spacing));
+    }
+
+}
 .pl-1 {
     padding-left: calc(1 * var(--spacing));
 }
