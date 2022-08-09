@@ -361,3 +361,7 @@ nav {
 ol li{
     list-style: decimal;
 }
+
+footer img {
+    width: 200px;
+}

@@ -5,6 +5,9 @@
 .bold {
     font-weight: bold;
 }
+.text-sm {
+    font-size: 14px;
+}
 .text-lg {
     font-size: 1.4rem;
 }
@@ -177,10 +180,14 @@
 .bg-lightblue {
     background-color: var(--lightblue);
 }
+.bg-gray {
+    background-color: var(--gray);
+}
 .shadow {
     box-shadow:0 5px 10px 0 rgb(0 0 0 / .1);
 
 }
+
 .lh-sm {
     line-height: 1rem;
 }
