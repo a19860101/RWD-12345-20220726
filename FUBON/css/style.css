@@ -102,11 +102,20 @@ nav {
     position: relative;
 }
 .etf-content {
-    padding-top: 60px;
-    padding-bottom: 30px;
-    padding-inline: 80px;
+    padding-top: 30px;
+    /* padding-bottom: 30px; */
+    padding-inline: 30px;
     position: relative;
     margin-bottom: 200px;
+}
+@media(min-width: 1200px){
+    .etf-content {
+        padding-top: 60px;
+        padding-bottom: 30px;
+        padding-inline: 80px;
+        position: relative;
+        margin-bottom: 200px;
+    }
 }
 .etf-link {
     position: relative;
@@ -145,7 +154,12 @@ nav {
     position: absolute;
     bottom: 0;
     right: 0;
-    transform: translate(100px,100%);
+    transform: translate(0,100%);
+}
+@media(min-width: 1200px){
+    [class^="etf-btn"]{
+        transform: translate(100px,100%);
+    }
 }
 .etf-btn-1 {
     background-color: var(--teal);
@@ -159,10 +173,6 @@ nav {
 .hr-2 {
     border-bottom: 1px solid var(--blue);
 }
-.etf-link-caption-2 span{
-    color: var(--blue);
-    font-size: 2rem;
-}
 .etf-list-2 li::marker {
     color: var(--blue);
 }
@@ -171,10 +181,6 @@ nav {
 }
 .etf-btn-2:hover {
     background-color: #0267aa;
-}
-.etf-info-2 span {
-    font-size: 3rem;
-    color: var(--blue);
 }
 .etf-btn-compare{
     background-color: var(--blue);
@@ -186,22 +192,8 @@ nav {
 #school {
     padding-block: 100px;
 }
-/* .section-title {
-    margin-bottom: 50px;
-
-}
-.section-title h2 {
-    text-align: center;
-    color: var(--blue);
-    margin-bottom: 30px;
-}
-.section-title p {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-} */
 .tab-nav {
-    width: 600px;
+    width: 480px;
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -209,14 +201,24 @@ nav {
     padding-bottom: 18px;
     border-bottom: 2px solid var(--blue);
 }
+@media(min-width: 1200px){
+    .tab-nav {
+        width: 600px;
+    }
+}
 .tab-link {
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: #818181;
     font-weight: bold;
 }
 .tab-link.active {
     color: var(--blue);
+}
+@media(min-width: 1200px){
+    .tab-link {
+        font-size: 2rem;
+    }
 }
 .tab-panel {
     margin-top: 30px;
@@ -229,11 +231,15 @@ nav {
     display: block;
 }
 #school .content {
-    padding-left: 100px;
     padding-right: 50px;
 
     display: flex;
     flex-direction: column;
+}
+@media(min-width: 1200px){
+    #school .content {
+        padding-left: 100px;
+    }
 }
 #school .date {
     color: #818181;
