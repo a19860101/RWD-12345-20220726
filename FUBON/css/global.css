@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400&family=Rajdhani:wght@400;700&display=swap');
 :root {
     --blue:#226fce;
     --lightblue: #e8f8ff;
@@ -8,9 +9,10 @@
 }
 * {
     box-sizing: border-box;
-    font-family: 'Segoe UI','微軟正黑體','sans-serif';
+    font-family: 'Rajdhani','Noto Sans TC','sans-serif';
     margin: 0;
     padding: 0;
+    font-weight: 300;
 }
 img {
     width: 100%;
