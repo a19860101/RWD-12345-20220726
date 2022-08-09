@@ -98,58 +98,31 @@ nav {
     ;
 }
 #etf {
-    background-color: var(--lightblue);
     padding-block: 100px;
     position: relative;
 }
-#etf h2 {
-    color: #fff;
-}
-#etf p{
-    font-size: 2rem;
-    margin-block: 30px;
-    font-weight: bold;
-    color: #fff;
-}
 .etf-content {
-    background-color: #fff;
     padding-top: 60px;
     padding-bottom: 30px;
-    justify-content: center;
     padding-inline: 80px;
-    box-shadow:0 5px 10px 0 rgb(0 0 0 / .1);
-    align-items: center;
     position: relative;
     margin-bottom: 200px;
 }
 .etf-link {
-    display: block;
     position: relative;
 }
 [class^='etf-link-caption']{
     top: 20px;
     left: 20px;
     position: absolute;
-    font-weight: bold;
     background-color: rgb(255 255 255 / .6);
     backdrop-filter: blur(5px);
-    padding: 10px;
-}
-.etf-link-caption-1 span {
-    font-size: 2rem;
-    color: var(--teal);
-}
-.etf-link-caption small {
-    font-size: 1.4rem;
 }
 
 #etf .col-8 {
     padding-left: 100px;
 }
 [class^="etf-list"]{
-    font-size: 1.4rem;
-    line-height: 3rem;
-    font-weight: bold;
     list-style: square;
     list-style-position: inside;
 }
@@ -159,18 +132,6 @@ nav {
 #etf hr {
     margin-top: 30px;
     margin-bottom: 40px;
-}
-[class^='etf-info'] {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-.etf-info-1 span {
-    font-size: 3rem;
-    color: var(--teal);
-}
-.etf-other {
-    color: gray;
 }
 [class^="etf-btn"]{
     display: inline-block;
