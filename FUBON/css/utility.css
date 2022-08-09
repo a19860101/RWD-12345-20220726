@@ -8,11 +8,34 @@
 .text-sm {
     font-size: 14px;
 }
+.text-base {
+    font-size: 16px;
+}
 .text-lg {
     font-size: 1.4rem;
 }
 .text-xl {
     font-size: 3rem;
+}
+.text-2xl {
+    font-size: 4rem;
+}
+@media(min-width:1200px){
+    .text-lg-sm {
+        font-size: 14px;
+    }
+    .text-lg-base {
+        font-size: 16px;
+    }
+    .text-lg-lg {
+        font-size: 1.4rem;
+    }
+    .text-lg-xl {
+        font-size: 3rem;
+    }
+    .text-lg-2xl {
+        font-size: 4rem;
+    }
 }
 .text-teal {
     color: var(--teal);
@@ -22,6 +45,9 @@
 }
 .text-white {
     color: #fff;
+}
+.text-gray {
+    color: var(--gray);
 }
 .m-1 {
     margin: calc(1 * var(--spacing));
@@ -59,6 +85,12 @@
 .mt-3 {
     margin-top: calc(3 * var(--spacing));
 }
+.my-1{margin-block: calc(1 * var(--spacing))}
+.my-2{margin-block: calc(2 * var(--spacing))}
+.my-3{margin-block: calc(3 * var(--spacing))}
+.my-4{margin-block: calc(4 * var(--spacing))}
+.my-5{margin-block: calc(5 * var(--spacing))}
+.my-6{margin-block: calc(6 * var(--spacing))}
 .p-0 {
     padding: 0;
 }

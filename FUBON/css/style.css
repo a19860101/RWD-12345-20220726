@@ -63,56 +63,32 @@ nav {
 
 /* #about */
 #about .bg {
-
     background-image: 
         linear-gradient(to right,rgba(34, 111, 206, 0.9) 70%,rgba(34, 111, 206, 0.6)),
         url('https://picsum.photos/id/98/1600/800')
     ;
-
 }
 #about {
-    background-color: var(--lightblue);
     padding-block: 100px;
     position: relative;
 }
-#about h2 {
-    color: #fff;
-}
 #about p{
-    font-size: 2rem;
     margin-block: 30px;
-    font-weight: bold;
-    color: #fff;
 }
 .about-content {
-    background-color: #fff;
-    padding-top: 90px;
-    padding-bottom: 60px;
-    justify-content: center;
-    text-align: center;
-    padding-inline: 80px;
-
-    box-shadow:0 5px 10px 0 rgb(0 0 0 / .1)
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-inline: 20px;
+}
+@media(min-width:1200px){
+    .about-content {
+        padding-top: 90px;
+        padding-bottom: 60px;
+        padding-inline: 80px;
+    }
 }
 #about h3 {
     font-size: 1.5rem;
-}
-#about .number {
-    font-size: 4rem;
-    color:var(--teal);
-    font-weight: bold;
-    margin-block: 20px;
-}
-#about .unit {
-    font-size: 2rem;
-}
-#about .caption {
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-#about .other {
-    color: gray;
-    margin-top: 30px;
 }
 /* etf */
 #etf .bg {
