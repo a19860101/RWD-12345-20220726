@@ -37,3 +37,16 @@ switch(error){
     default:
         console.log('發生錯誤，請洽系統管理員');
 }
+
+let a = -23;
+
+switch(true){
+    case a > 0:
+        console.log('+');
+        break;
+    case a < 0:
+        console.log('-');
+        break;
+    default:
+        console.log(0);
+}
