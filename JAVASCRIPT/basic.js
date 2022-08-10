@@ -19,3 +19,9 @@ var a = 123;
 b = b + 1;
 
 console.log(b);
+
+
+const x = 'hello';
+console.log(x);
+// 常數 不可重新賦值 
+
