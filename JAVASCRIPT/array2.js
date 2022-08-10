@@ -12,4 +12,7 @@ drinks.unshift('可樂');
 // shift()
 drinks.shift()
 
+// splice()
+// drinks.splice(1,1,'茉莉綠茶','test');
+drinks.splice(0,1);
 console.log(drinks);
