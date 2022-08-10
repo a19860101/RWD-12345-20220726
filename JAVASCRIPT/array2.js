@@ -14,5 +14,18 @@ drinks.shift()
 
 // splice()
 // drinks.splice(1,1,'茉莉綠茶','test');
-drinks.splice(0,1);
+// drinks.splice(0,1);
+
+// slice()
+let myDrinks = drinks.slice(0,2);
+console.log(myDrinks);
+
+// join()
+let drinkStr = drinks.join('+++');
+console.log(drinkStr);
+
+// toString()
+let drinkStr2 = drinks.toString();
+console.log(drinkStr2);
+
 console.log(drinks);
