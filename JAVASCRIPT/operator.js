@@ -26,3 +26,13 @@ console.log(x -= y); // x = x - y 6
 console.log(x *= y); // x = x * y 36
 console.log(x /= y); // x = x / y 6
 console.log(x %= y); // x = x % y 0
+
+// 邏輯運算子
+console.log(x > 0 && y > 0);
+console.log(x > 0 || y > 0);
+console.log(!y);
+
+// 三元運算子
+let a = -10;
+
+console.log( a > 0 ? '正數':'負數');
