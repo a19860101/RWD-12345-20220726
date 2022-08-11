@@ -33,14 +33,33 @@
         // let a = document.getElementsByTagName('a');
         // console.log(a);
 
-        let title = document.querySelector('#title');
-        console.log(title);
-        let content = document.querySelector('.content');
-        console.log(content);
-        let list = document.querySelectorAll('.list');
+        // let title = document.querySelector('#title');
+        // console.log(title);
+        // let content = document.querySelector('.content');
+        // console.log(content);
+        // let list = document.querySelectorAll('.list');
+        // console.log(list);
+        // let a = document.querySelectorAll('a');
+        // console.log(a);
+
+        // let list = document.getElementsByClassName('list');
+        // let list = document.querySelectorAll('.list');
+
+        // let list = Array.from(document.getElementsByClassName('list'));
+        let list = Array.from(document.querySelectorAll('.list'));
+
         console.log(list);
-        let a = document.querySelectorAll('a');
-        console.log(a);
+
+        for(let data of list){
+            console.log(data);
+        }
+        list.forEach(data => {
+            console.log(data);
+        })
+
+        const list_map = list.map(data=>{
+            console.log(data);
+        })
     </script>
 </body>
 </html>
