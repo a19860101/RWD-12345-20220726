@@ -20,3 +20,20 @@ const scores_good = scores.map(function(data){
     return data>=80 ? 'Good':'再加油';
 })
 console.log(scores_good);
+
+
+// filter()
+const scores_filter = scores.filter(function(data){
+    return data != 64;
+})
+console.log(scores_filter);
+
+// reduce()
+const price = [100,65,30];
+
+const total = price.reduce(function(a,b){
+    // console.log('a:'+ a);
+    // console.log('b:' + b);
+    return a+b;
+})
+console.log(total);
