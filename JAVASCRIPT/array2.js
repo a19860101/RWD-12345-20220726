@@ -42,3 +42,13 @@ console.log(letterArray.sort())
 
 // reverse()
 console.log(letterArray.reverse())
+
+// indexOf()
+let test = 'apple';
+console.log(test.indexOf('z'));
+
+console.log(drinks.indexOf('奶茶'));
+
+// concat()
+console.log(drinks.concat(numberArray));
+console.log(numberArray.concat(drinks));
