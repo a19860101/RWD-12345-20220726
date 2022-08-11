@@ -40,3 +40,23 @@ const square = x => x * x;
 
 console.log(square(11));
 // 箭頭函式的this跟一般函式有些許不同
+
+const q1 = function(){
+    return this;
+}
+const q2 = () => this;
+
+console.log(q1());
+console.log(q2());
+
+const obj = {
+    q1: function(){
+        return this;
+    },
+    q2: () => this
+}
+
+console.log(obj.q1());
+console.log(obj.q2());
+
+// 箭頭函式的this會指向到window元件
