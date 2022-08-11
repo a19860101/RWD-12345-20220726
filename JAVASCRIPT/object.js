@@ -42,9 +42,11 @@ console.log(drinks);
 const drink_name = drinks.map(function(data){
     return data.name;
 })
-const drink_price = drinks.map(function(data){
-    return data.price;
-})
+// const drink_price = drinks.map(function(data){
+//     return data.price;
+// })
+
+const drink_price = drinks.map(data => data.price);
 
 console.log(drink_name)
 console.log(drink_price)
