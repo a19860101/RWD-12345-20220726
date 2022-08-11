@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">我式標題</h1>
+    <div class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae laboriosam consequatur repellendus atque ratione repellat cumque possimus, consequuntur debitis animi accusantium fugit sapiente rem culpa sint neque odit recusandae consectetur?
+    </div>
+    <ul class="lists">
+        <li class="list"><a href="#">link</a></li>
+        <li class="list"><a href="#">link</a></li>
+        <li class="list"><a href="#">link</a></li>
+        <li class="list"><a href="#">link</a></li>
+        <li class="list"><a href="#">link</a></li>
+    </ul>
+    <script>
+        let title = document.getElementById('title');
+        console.log(title);
+        let content = document.getElementsByClassName('content')[0];
+        console.log(content);
+        let list = document.getElementsByClassName('list');
+        console.log(list);
+        console.log(list[0]);
+        console.log(list[1]);
+        console.log(list[2]);
+        console.log(list[3]);
+        console.log(list[4]);
+        let a = document.getElementsByTagName('a');
+        console.log(a);
+    </script>
+</body>
+</html>
