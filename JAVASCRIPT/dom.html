@@ -19,18 +19,27 @@
         <li class="list"><a href="#">link</a></li>
     </ul>
     <script>
-        let title = document.getElementById('title');
+        // let title = document.getElementById('title');
+        // console.log(title);
+        // let content = document.getElementsByClassName('content')[0];
+        // console.log(content);
+        // let list = document.getElementsByClassName('list');
+        // console.log(list);
+        // console.log(list[0]);
+        // console.log(list[1]);
+        // console.log(list[2]);
+        // console.log(list[3]);
+        // console.log(list[4]);
+        // let a = document.getElementsByTagName('a');
+        // console.log(a);
+
+        let title = document.querySelector('#title');
         console.log(title);
-        let content = document.getElementsByClassName('content')[0];
+        let content = document.querySelector('.content');
         console.log(content);
-        let list = document.getElementsByClassName('list');
+        let list = document.querySelectorAll('.list');
         console.log(list);
-        console.log(list[0]);
-        console.log(list[1]);
-        console.log(list[2]);
-        console.log(list[3]);
-        console.log(list[4]);
-        let a = document.getElementsByTagName('a');
+        let a = document.querySelectorAll('a');
         console.log(a);
     </script>
 </body>
