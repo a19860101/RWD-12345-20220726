@@ -28,4 +28,17 @@ console.log(drinkStr);
 let drinkStr2 = drinks.toString();
 console.log(drinkStr2);
 
+
+// split()
+let str ='test,test1,test2,test3,test4';
+console.log(str.split(','))
 console.log(drinks);
+
+
+const numberArray = [12,46,6,24,92];
+const letterArray = ['c','a','h','f'];
+// sort()
+console.log(letterArray.sort())
+
+// reverse()
+console.log(letterArray.reverse())
