@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .active {
+        .content {
+            transition: 600ms;
+        }
+        .content.active {
             background-color: #ffabab;
             color: #098;
             padding: 15px;
@@ -15,7 +18,9 @@
     </style>
 </head>
 <body>
-    <button>click</button>
+    <button onclick="addActive()">Add Active</button>
+    <button onclick="removeActive()">Remove Active</button>
+    <button onclick="toggleActive()">Toggle Active</button>
     <div class="content">
         職工提示主營沒人然後郵遞區號全市師傅聽說傳奇近日種子鄉民，熱門培養聲明區域眼睛台鐵規格到我其他屬性，僅供拍攝笑道誠信有所全體，上升合適總是對他上門貼布植物足夠疾病才會，快捷穩定大連總算需要古代詳細高中都有思想加入時間很有，眼神檔案父親據說評分出台，容量是。
     </div>
@@ -25,7 +30,15 @@
         // content.style.backgroundColor = 'gray';
         // content.style.padding = '15px';
         // content.style.borderRadius = '15px';
-        content.classList.add('active');
+        function addActive(){
+            content.classList.add('active');
+        }
+        function removeActive(){
+            content.classList.remove('active');
+        }
+        function toggleActive(){
+            content.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
