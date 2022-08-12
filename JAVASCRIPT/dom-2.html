@@ -18,11 +18,19 @@
     </style>
 </head>
 <body>
-    <button onclick="addActive()">Add Active</button>
-    <button onclick="removeActive()">Remove Active</button>
-    <button onclick="toggleActive()">Toggle Active</button>
+    <div>
+
+        <button onclick="addActive()">Add Active</button>
+        <button onclick="removeActive()">Remove Active</button>
+        <button onclick="toggleActive()">Toggle Active</button>
+    </div>
     <div class="content">
         職工提示主營沒人然後郵遞區號全市師傅聽說傳奇近日種子鄉民，熱門培養聲明區域眼睛台鐵規格到我其他屬性，僅供拍攝笑道誠信有所全體，上升合適總是對他上門貼布植物足夠疾病才會，快捷穩定大連總算需要古代詳細高中都有思想加入時間很有，眼神檔案父親據說評分出台，容量是。
+    </div>
+    <div>
+        <button id="add">Add</button>
+        <button id="remove">Remove</button>
+        <button id="toggle">Toggle</button>
     </div>
     <script>
         let content = document.querySelector('.content');
@@ -37,6 +45,18 @@
             content.classList.remove('active');
         }
         function toggleActive(){
+            content.classList.toggle('active');
+        }
+        let add = document.querySelector('#add');
+        let remove = document.querySelector('#remove');
+        let toggle = document.querySelector('#toggle');
+        add.onclick = () => {
+            content.classList.add('active');
+        }
+        remove.onclick = () => {
+            content.classList.remove('active');
+        }
+        toggle.onclick = () => {
             content.classList.toggle('active');
         }
     </script>
