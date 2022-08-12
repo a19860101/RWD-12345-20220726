@@ -50,15 +50,21 @@
         let add = document.querySelector('#add');
         let remove = document.querySelector('#remove');
         let toggle = document.querySelector('#toggle');
-        add.onclick = () => {
-            content.classList.add('active');
-        }
-        remove.onclick = () => {
-            content.classList.remove('active');
-        }
-        toggle.onclick = () => {
+        // add.onclick = () => {
+        //     content.classList.add('active');
+        // }
+        // remove.onclick = () => {
+        //     content.classList.remove('active');
+        // }
+        // toggle.onclick = () => {
+        //     content.classList.toggle('active');
+        // }
+        // 加入監聽
+        add.addEventListener('click',addActive)
+        remove.addEventListener('click',removeActive)
+        toggle.addEventListener('click',function(){
             content.classList.toggle('active');
-        }
+        })
     </script>
 </body>
 </html>
