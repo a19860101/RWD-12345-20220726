@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+        .tab {
+            width: 600px;
+            margin-inline: auto;
+        }
+        .tab-nav {
+            background-color: #222;
+            display: flex;
+        }
+        .tab-link {
+            text-decoration: none;
+            display: block;
+            color: #eee;
+            padding-inline: 20px;
+            padding-block: 10px
+        }
+        .tab-link.active {
+            background-color: #eaff9c;
+            color: #232;
+        }
+        .tab-panel {
+            background-color: #eaff9c;
+            padding: 15px;
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab-nav">
+            <a href="#" class="tab-link active">Tab 1</a>
+            <a href="#" class="tab-link">Tab 2</a>
+            <a href="#" class="tab-link">Tab 3</a>
+        </div>
+        <div class="tab-panel active">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestiae modi, tempore sunt inventore velit iusto! Reiciendis repellendus, aliquid excepturi beatae placeat quis, laborum sequi quisquam architecto, atque unde libero?
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium recusandae eos repudiandae impedit ratione, quidem, placeat enim quia facere veritatis nulla harum asperiores, neque maxime odit doloremque consequuntur odio quam?
+            </p>
+        </div>
+        <div class="tab-panel">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestiae modi, tempore sunt inventore velit iusto! Reiciendis repellendus, aliquid excepturi beatae placeat quis, laborum sequi quisquam architecto, atque unde libero?
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium recusandae eos repudiandae impedit ratione, quidem, placeat enim quia facere veritatis nulla harum asperiores, neque maxime odit doloremque consequuntur odio quam?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestiae modi, tempore sunt inventore velit iusto! Reiciendis repellendus, aliquid excepturi beatae placeat quis, laborum sequi quisquam architecto, atque unde libero?
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium recusandae eos repudiandae impedit ratione, quidem, placeat enim quia facere veritatis nulla harum asperiores, neque maxime odit doloremque consequuntur odio quam?
+            </p>
+        </div>
+        <div class="tab-panel">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestiae modi, tempore sunt inventore velit iusto! Reiciendis repellendus, aliquid excepturi beatae placeat quis, laborum sequi quisquam architecto, atque unde libero?
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium recusandae eos repudiandae impedit ratione, quidem, placeat enim quia facere veritatis nulla harum asperiores, neque maxime odit doloremque consequuntur odio quam?
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium recusandae eos repudiandae impedit ratione, quidem, placeat enim quia facere veritatis nulla harum asperiores, neque maxime odit doloremque consequuntur odio quam?
+            </p>
+        </div>
+    </div>
+</body>
+</html>
