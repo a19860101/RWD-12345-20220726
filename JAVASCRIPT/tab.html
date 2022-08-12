@@ -14,17 +14,21 @@
         .tab {
             width: 600px;
             margin-inline: auto;
+            position: relative;
         }
         .tab-nav {
             background-color: #222;
             display: flex;
+            position: relative;
+            z-index: 10;
         }
         .tab-link {
             text-decoration: none;
             display: block;
             color: #eee;
             padding-inline: 20px;
-            padding-block: 10px
+            padding-block: 10px;
+            transition: 400ms;
         }
         .tab-link.active {
             background-color: #eaff9c;
@@ -33,10 +37,20 @@
         .tab-panel {
             background-color: #eaff9c;
             padding: 15px;
-            display: none;
+            position: absolute;
+            /* display: none; */
+            visibility: hidden;
+            transition-property: opacity,transform;
+            transition-duration: 800ms;
+            transform: translateY(-4%);
+            opacity: 0;
         }
         .tab-panel.active {
-            display: block;
+            /* display: block; */
+            visibility:visible;
+            opacity: 1;
+            transform: translateY(0);
+
         }
     </style>
 </head>
