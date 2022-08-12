@@ -88,9 +88,14 @@
         const tabLinks = document.querySelectorAll('.tab-link');
         for(let tabLink of tabLinks){
             tabLink.onclick = function(){
+                document.querySelector('.tab-link.active').classList.remove('active');
+                this.classList.add('active');
+
+
                 let href = this.getAttribute('href');
                 let panel = this.dataset.panel;
-                console.log(panel);
+                document.querySelector('.tab-panel.active').classList.remove('active');
+                document.querySelector(panel).classList.add('active');
             }
         }
     </script>
