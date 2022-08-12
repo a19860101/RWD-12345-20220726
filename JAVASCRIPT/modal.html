@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans MT';
+        }
+        .modal {
+            /* display: none; */
+            visibility: hidden;
+        }
+        .modal.active {
+            /* display: block; */
+            visibility: visible;
+        }
+        .modal-overlay {
+            position: fixed;
+            background-color: rgb(0 0 0 / .8);
+            inset:0;
+        }
+        .modal-container {
+            position: fixed;
+            background-color: #fff;
+            width: 80%;
+            max-width: 750px;
+            padding: 20px;
+            border-radius: 10px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <a href="#modal-1" data-modal="#modal-1" class="modal-btn">Modal 1</a>
+    <div class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h4>Modal 1</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam consectetur quo sapiente provident quia? Repellendus delectus similique doloremque possimus fugit ad culpa eveniet ipsa id adipisci, facere sed et aut?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, sit asperiores aperiam tempore reprehenderit nulla. Repudiandae, ratione autem nostrum, voluptatum debitis incidunt, est sint unde quae minima in veniam corrupti.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-close">Close</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
