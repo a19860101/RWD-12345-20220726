@@ -90,8 +90,14 @@
                 document.querySelector(modal).classList.add('active');
             }
         }
-        document.onclick = e => {
-            if(e.target.className.indexOf('modal-close') > -1){
+        // document.onclick = e => {
+        //     if(e.target.className.indexOf('modal-close') > -1){
+        //         document.querySelector('.modal.active').classList.remove('active');
+        //     }
+        // }
+        let closes = document.querySelectorAll('.modal-close');
+        for(let close of closes){
+            close.onclick = e => {
                 document.querySelector('.modal.active').classList.remove('active');
             }
         }
