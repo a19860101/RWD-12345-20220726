@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans MT';
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .slider {
+            width: 1200px;
+            margin-inline: auto;
+            position: relative;
+        }
+        .slider-item {
+            position: absolute;
+            opacity: 0;
+            z-index: -2;
+        }
+        .slider-item.active {
+            opacity: 1;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slider-item active">
+            <img src="https://picsum.photos/1600/800?random=1" alt="">
+            <div class="slider-caption">
+                <h4>Slider 1</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae earum pariatur animi?</p>
+            </div>
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/1600/800?random=2" alt="">
+            <div class="slider-caption">
+                <h4>Slider 2</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae earum pariatur animi?</p>
+            </div>
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/1600/800?random=3" alt="">
+            <div class="slider-caption">
+                <h4>Slider 3</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae earum pariatur animi?</p>
+            </div>
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/1600/800?random=4" alt="">
+            <div class="slider-caption">
+                <h4>Slider 4</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae earum pariatur animi?</p>
+            </div>
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/1600/800?random=5" alt="">
+            <div class="slider-caption">
+                <h4>Slider 5</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae earum pariatur animi?</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
