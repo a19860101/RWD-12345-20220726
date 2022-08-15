@@ -18,6 +18,7 @@
         }
         .gallery-link {
             width: 20%;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -38,7 +39,8 @@
         let galleryLinks = document.querySelectorAll('.gallery-link');
         for(let link of galleryLinks){
             link.onclick = e => {
-                console.log(e.target);
+                let newSrc = e.target.getAttribute('src');
+                document.querySelector('.main-img').setAttribute('src',newSrc);
             }
         }
     </script>
