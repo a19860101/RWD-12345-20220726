@@ -25,6 +25,8 @@
             position: absolute;
             opacity: 0;
             z-index: -2;
+
+            transition: opacity 1000ms;
         }
         .slider-item.active {
             opacity: 1;
@@ -76,15 +78,20 @@
         let currentIndex= 0;
 
         const slider = e => {
-            if(currentIndex === total - 1){
-                currentIndex = 0;
-            }else{
-                currentIndex += 1;
-            }
+            // if(currentIndex === total - 1){
+            //     currentIndex = 0;
+            // }else{
+            //     currentIndex += 1;
+            // }
+
+            currentIndex = (currentIndex + 1) % total;
+
             console.log(currentIndex)
+            document.querySelector('.slider-item.active').classList.remove('active');
+            imgs[currentIndex].classList.add('active');
         }
 
-        setInterval(slider,1000);
+        setInterval(slider,5000);
     </script>
 </body>
 </html>
