@@ -74,6 +74,23 @@
             background-color: rgb(255 255 255 / .4);
 
         }
+        .slider-dots {
+            position: absolute;
+            width: 100%;
+            z-index: 999;
+            text-align: center;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .dot {
+            display: block;
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            margin-inline: 10px;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
@@ -106,17 +123,18 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae earum pariatur animi?</p>
             </div>
         </div>
-        <div class="slider-item">
+        <!-- <div class="slider-item">
             <img src="https://picsum.photos/1600/800?random=5" alt="">
             <div class="slider-caption">
                 <h4>Slider 5</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae earum pariatur animi?</p>
             </div>
-        </div>
+        </div> -->
         <div class="slider-nav">
             <a href="#" class="slider-prev"><i class="fa-solid fa-circle-chevron-left fa-xl"></i></a>
             <a href="#" class="slider-next"><i class="fa-solid fa-circle-chevron-right fa-xl"></i></a>
         </div>
+        <div class="slider-dots"></div>
     </div>
     <script>
         let imgs = document.querySelectorAll('.slider-item');
@@ -149,6 +167,12 @@
         }
 
         setInterval(slider,6000);
+
+        for(let i=0;i<total;i++){
+            let span = document.createElement('span');
+            span.classList.add('dot');
+            document.querySelector('.slider-dots').append(span)
+        }
     </script>
 </body>
 </html>
