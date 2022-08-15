@@ -23,6 +23,8 @@
         }
         .slider-wrapper {
             display: flex;
+            flex-wrap: wrap;
+            transition: 600ms;
         }
         .slider-item {
             width: 1200px;
@@ -76,5 +78,31 @@
             <a href="#" class="slider-next"><i class="fa-solid fa-circle-chevron-right fa-xl"></i></a>
         </div>
     </div>
+    <script>
+        let imgs = document.querySelectorAll('.slider-item');
+        let total = imgs.length;
+        let currentIndex = 0;
+        let next = document.querySelector('.slider-next');
+        let prev = document.querySelector('.slider-prev');
+        let sliderItem = document.querySelector('.slider-item');
+        let imgWidth = sliderItem.clientWidth;
+        let wrapperWidth = imgWidth * total;
+        let wrapper = document.querySelector('.slider-wrapper');
+        wrapper.style.width = wrapperWidth + 'px';
+
+        const slider = direction => {
+            if(direction === 'prev'){
+                currentIndex = currentIndex === 0 ? total : currentIndex;
+                currentIndex = (currentIndex - 1) % total;
+            }else{
+                currentIndex = (currentIndex + 1) % total;
+            }
+            wrapper.style.marginLeft = -(imgWidth * currentIndex) + 'px';
+        }
+
+
+        setInterval(slider,4000);
+
+    </script>
 </body>
 </html>
