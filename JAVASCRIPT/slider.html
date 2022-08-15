@@ -48,6 +48,32 @@
         .slider-nav a {
             color: #fff;
         }
+        
+        .slider-caption {
+            background-color: rgb(255 255 255 / 0);
+            backdrop-filter: blur(8px);
+            width: 60%;
+            height: fit-content;
+            position: absolute;
+            inset:0;
+            margin: auto;
+            text-align: center;
+            font-size: 1.5rem;
+            padding-block: 30px;
+            border-radius: 10px;
+            transform: translateY(50%);
+
+            transition-property: transform,background-color;
+            transition-duration: 400ms;
+        }
+        .slider-caption h4 {
+            font-size: 4rem;
+        }
+        .slider-item.active .slider-caption{
+            transform: translateY(0);
+            background-color: rgb(255 255 255 / .4);
+
+        }
     </style>
 </head>
 <body>
@@ -122,7 +148,7 @@
             imgs[currentIndex].classList.add('active');
         }
 
-        setInterval(slider,5000);
+        setInterval(slider,6000);
     </script>
 </body>
 </html>
