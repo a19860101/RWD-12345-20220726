@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery {
+            width: 800px;
+            margin-inline: auto;
+        }
+        img {
+            width: 100%;
+        }
+        .gallery-nav {
+            display: flex;
+        }
+        .gallery-link {
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <main>
+            <img src="images/iphone-13-finish-select-202207-6-1inch-blue.jpg" class="main-img">
+        </main>
+        <div class="gallery-nav">
+            <img src="images/iphone-13-finish-select-202207-6-1inch-blue.jpg" class="gallery-link">
+            <img src="images/iphone-13-finish-select-202207-6-1inch-midnight.jpg" class="gallery-link">
+            <img src="images/iphone-13-finish-select-202207-6-1inch-pink.jpg" class="gallery-link">
+            <img src="images/iphone-13-finish-select-202207-6-1inch-product-red.jpg" class="gallery-link">
+            <img src="images/iphone-13-finish-select-202207-6-1inch-starlight.jpg" class="gallery-link">
+        </div>
+    </div>
+    <script>
+        let galleryLinks = document.querySelectorAll('.gallery-link');
+        for(let link of galleryLinks){
+            link.onclick = e => {
+                console.log(e.target);
+            }
+        }
+    </script>
+</body>
+</html>
