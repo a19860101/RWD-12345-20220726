@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
             margin: 0;
@@ -20,6 +21,7 @@
             width: 1200px;
             margin-inline: auto;
             position: relative;
+            padding-bottom: calc(1200px * 1 / 2);
         }
         .slider-item {
             position: absolute;
@@ -31,6 +33,20 @@
         .slider-item.active {
             opacity: 1;
             z-index: 2;
+        }
+        .slider-nav {
+            position: absolute;
+            width: 100%;
+            padding: 10px;
+            bottom: 0;
+            background-color: rgb( 0 0 0 / .5);
+            backdrop-filter: blur(5px);
+            z-index: 15;
+            display: flex;
+            justify-content: space-between;
+        }
+        .slider-nav a {
+            color: #fff;
         }
     </style>
 </head>
@@ -70,6 +86,10 @@
                 <h4>Slider 5</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae earum pariatur animi?</p>
             </div>
+        </div>
+        <div class="slider-nav">
+            <a href="#" class="slider-prev"><i class="fa-solid fa-circle-chevron-left fa-xl"></i></a>
+            <a href="#" class="slider-next"><i class="fa-solid fa-circle-chevron-right fa-xl"></i></a>
         </div>
     </div>
     <script>
