@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Gill sans mt';
+            font-family: 'Segoe UI';
         }
         img {
             vertical-align: top;
@@ -20,6 +22,7 @@
             width: 1200px;
             margin-inline: auto;
             position: relative;
+            overflow: hidden;
         }
         .slider-wrapper {
             display: flex;
@@ -30,7 +33,37 @@
             width: 1200px;
             position: relative;
         }
+        .slider-caption {
+            position: absolute;
+            background-color: rgb(255 255 255 / .6);
+            bottom: 0;
+            z-index: 10 ;
+            width: fit-content;
+            height: fit-content;
+            inset: 0;
+            margin: auto;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            font-size: 1.3rem;
+        }
         
+        .slider-caption h4 {
+            font-size: 3rem;
+        }
+        .slider-nav {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(255, 114, 114);
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .slider-nav a {
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -89,6 +122,9 @@
         let wrapperWidth = imgWidth * total;
         let wrapper = document.querySelector('.slider-wrapper');
         wrapper.style.width = wrapperWidth + 'px';
+
+        next.onclick = () => {slider()};
+        prev.onclick = () => {slider('prev')};
 
         const slider = direction => {
             if(direction === 'prev'){
