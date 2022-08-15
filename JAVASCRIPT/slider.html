@@ -70,5 +70,21 @@
             </div>
         </div>
     </div>
+    <script>
+        let imgs = document.querySelectorAll('.slider-item');
+        let total = imgs.length;
+        let currentIndex= 0;
+
+        const slider = e => {
+            if(currentIndex === total - 1){
+                currentIndex = 0;
+            }else{
+                currentIndex += 1;
+            }
+            console.log(currentIndex)
+        }
+
+        setInterval(slider,1000);
+    </script>
 </body>
 </html>
