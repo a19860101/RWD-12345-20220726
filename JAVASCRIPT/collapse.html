@@ -33,14 +33,14 @@
 <body>
     <aside>
 
-        <a href="#collapse-1" data-target="#collapse" class="collapse-btn">click 1</a>
+        <a href="#collapse-1" data-target="#collapse-1" class="collapse-btn">click 1</a>
         <div class="collapse-panel" id="collapse-1">
             <h2>collapse 1</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis qui ducimus dolore ut nemo dolores, nisi, corporis a debitis quod numquam aliquam id sunt exercitationem, corrupti animi consequatur perferendis repellendus!
             </p>
         </div>
-        <a href="#collapse-2" data-target="#collapse" class="collapse-btn">click 2</a>
+        <a href="#collapse-2" data-target="#collapse-2" class="collapse-btn">click 2</a>
         <div class="collapse-panel" id="collapse-2">
             <h2>collapse 2</h2>
             <p>
@@ -69,6 +69,16 @@
                 }else{
                     panel.style.height = panel.scrollHeight + 'px';
                 }
+
+                // let panel = e.target.dataset.target;
+                // let target = document.querySelector(panel);
+                // target.classList.toggle('active');
+                // if(target.style.height){
+                //     target.style.height = null;
+                // }else{
+                //     target.style.height = target.scrollHeight + 'px';
+                // }
+
             }
         }
     </script>
