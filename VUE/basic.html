@@ -10,16 +10,22 @@
 <body>
     <div id="app">
         <h1>{{title}}</h1>
+        <img :src="cover" alt="">
         <p>
             {{desc}}
         </p>
+        <div v-if="qty>10">庫存充足</div>
+        <div v-else-if="qty>0">低庫存</div>
+        <div v-else>補貨中</div>
     </div>
     <script>
         Vue.createApp({
             data(){
                 return {
                     title: 'Hello VUE!!!',
-                    desc: 'Nice To Meet You!!'
+                    desc: 'Nice To Meet You!!',
+                    cover: 'https://picsum.photos/id/23/400',
+                    qty: 0,
                 }
             }
         }).mount('#app');
