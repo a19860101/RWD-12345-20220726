@@ -90,6 +90,11 @@
             background-color: #fff;
             margin-inline: 10px;
             border-radius: 50%;
+            cursor: pointer;
+            transition: 500ms
+        }
+        .dot:hover {
+            background-color: crimson;
         }
     </style>
 </head>
@@ -171,7 +176,17 @@
         for(let i=0;i<total;i++){
             let span = document.createElement('span');
             span.classList.add('dot');
+            span.dataset.img = i; 
             document.querySelector('.slider-dots').append(span)
+        }
+
+        let dots = document.querySelectorAll('.dot');
+        for(let dot of dots){
+            dot.onclick = e => {
+                document.querySelector('.slider-item.active').classList.remove('active');
+                currentIndex = e.target.dataset.img;
+                imgs[currentIndex].classList.add('active');
+            }
         }
     </script>
 </body>
