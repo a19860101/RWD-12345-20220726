@@ -5,8 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .price {
+            color: #f00;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+
+    </div>
     <script>
         // fetch('data.json')
         // .then(function(response){
@@ -19,6 +27,16 @@
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            data.products.forEach(prod => {
+                console.log(prod)
+                let h2 = document.createElement('h2');
+                h2.append(prod.name);
+                let price = document.createElement('div');
+                price.classList.add('price');
+                price.append(prod.price);
+                document.querySelector('.container').append(h2,price);
+            })
+
         })
     </script>
 </body>
