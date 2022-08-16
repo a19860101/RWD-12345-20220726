@@ -169,9 +169,9 @@
             console.log(currentIndex)
             document.querySelector('.slider-item.active').classList.remove('active');
             imgs[currentIndex].classList.add('active');
+            return currentIndex;
         }
 
-        setInterval(slider,6000);
 
         for(let i=0;i<total;i++){
             let span = document.createElement('span');
@@ -188,6 +188,9 @@
                 imgs[currentIndex].classList.add('active');
             }
         }
+
+        setInterval(slider,6000);
+
     </script>
 </body>
 </html>
