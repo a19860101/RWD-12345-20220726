@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>title</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur non facere labore repellendus nostrum amet doloremque numquam aperiam culpa corrupti? Nulla vel nam vitae! Vero repellat vel sit fugit repellendus?
+        </p>
+        <div class="content">
+            <h2>titile</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem assumenda dolore veritatis alias libero atque voluptatem, aspernatur iusto, iure consectetur aut, doloribus architecto quas harum. Vitae doloribus est aliquam nemo.
+            </p>
+            <ul>
+                <li class="list"><a href="#">list</a></li>
+                <li class="list"><a href="#">list</a></li>
+                <li class="list"><a href="#">list</a></li>
+                <li class="list"><a href="#">list</a></li>
+                <li class="list"><a href="#">list</a></li>
+                <!-- asdf -->
+                <li class="list"><a href="#">list</a></li>
+            </ul><!-- 我是註解 -->
+        </div>
+    </div>
+    <script>
+        let el = document.querySelector('ul');
+        console.log(el);
+        // 父元素
+        console.log(el.parentElement);
+
+        // 父節點
+        console.log(el.parentNode);
+
+        // 同輩元素
+        console.log(el.nextElementSibling);
+        console.log(el.previousElementSibling);
+
+        // 同輩節點
+        console.log(el.nextSibling);
+        console.log(el.previousSibling);
+
+        // 子元素
+        console.log(el.children);
+        // 子節點
+        console.log(el.childNodes);
+        /* 
+            節點
+            元素節點
+            文字節點(換行算文字節點)
+            註解節點
+        
+        */
+    </script>
+</body>
+</html>
