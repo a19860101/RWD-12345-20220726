@@ -17,6 +17,9 @@
         <div v-if="qty>10">庫存充足</div>
         <div v-else-if="qty>0">低庫存</div>
         <div v-else>補貨中</div>
+        <ul>
+            <li v-for="data,idx in datas">{{idx + 1}}.{{data}}</li>
+        </ul>
     </div>
     <script>
         Vue.createApp({
@@ -26,6 +29,7 @@
                     desc: 'Nice To Meet You!!',
                     cover: 'https://picsum.photos/id/23/400',
                     qty: 0,
+                    datas: ['apple','banana','cat']
                 }
             }
         }).mount('#app');
