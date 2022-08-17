@@ -8,15 +8,28 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/grid.css">
     <script src="https://unpkg.com/vue@3"></script>
-
 </head>
 <body>
     <div id="app">
+        <nav>
+            <a href="#">購物車</a>
+        </nav>
+        <div class="carts">
+            <h2>購物車列表</h2>
+        </div>
         <div class="container row">
             <div class="col-3" v-for="product in products">
                 <div>
-                    <h3>{{product.title}}</h3>
-                    <div>{{product.price}}</div>
+                    <div>
+                        <img :src="product.image" alt="">
+                    </div>
+                    <div>
+                        <h3>{{product.title}}</h3>
+                        <div>{{product.price}}</div>
+                        <form action="" method="post">
+                            <input type="submit" value="加入購物車" @click.prevent="addToCarts()">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -26,6 +39,12 @@
             data(){
                 return {
                     products:[],
+                    carts:[],
+                }
+            },
+            methods:{
+                addToCarts(){
+                    console.log('add')
                 }
             },
             created(){
