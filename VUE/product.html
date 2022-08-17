@@ -13,12 +13,14 @@
     <div id="app">
         <nav>
             <a href="#">購物車</a>
+            <span>{{carts.length}}</span>
         </nav>
         <div class="carts">
             <h2>購物車列表</h2>
+            <div>{{carts}}</div>
         </div>
         <div class="container row">
-            <div class="col-3" v-for="product in products">
+            <div class="col-3" v-for="product,idx in products" :key="product.id">
                 <div>
                     <div>
                         <img :src="product.image" alt="">
@@ -27,7 +29,7 @@
                         <h3>{{product.title}}</h3>
                         <div>{{product.price}}</div>
                         <form action="" method="post">
-                            <input type="submit" value="加入購物車" @click.prevent="addToCarts()">
+                            <input type="submit" value="加入購物車" @click.prevent="addToCarts(product.id)">
                         </form>
                     </div>
                 </div>
@@ -43,9 +45,13 @@
                 }
             },
             methods:{
-                addToCarts(){
-                    console.log('add')
+                addToCarts(id){
+                    let item = this.products.find(data => data.id === id);
+                    this.carts.push(item);
                 }
+            },
+            computed:{
+                
             },
             created(){
                 const url = 'https://fakestoreapi.com/products';
