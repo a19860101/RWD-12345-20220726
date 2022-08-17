@@ -16,7 +16,10 @@
         </form>
         <div>
             <ul>
-                <li v-for="todo,idx in todos">{{todo}}</li>
+                <li v-for="todo,idx in todos">
+                    {{todo}}
+                    <button @click="deleteTodoItem(idx)">刪除</button>
+                </li>
             </ul>
         </div>
     </div>
@@ -36,6 +39,12 @@
                     }
                     this.todos.push(this.input);
                     this.input = '';
+                },
+                deleteTodoItem(idx){
+                    console.log(idx);
+                    if(confirm('確認刪除？')){
+                        this.todos.splice(idx,1);
+                    }
                 }
             }
         }).mount('#app');
