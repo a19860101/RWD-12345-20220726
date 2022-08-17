@@ -14,12 +14,23 @@
             <input type="text" v-model="input">
             <input type="submit" value="新增事項" @click.prevent="addTodoItem()">
         </form>
-        <div>
+        <div v-show="unCompletedTodos.length > 0">
+            <h2>未完成</h2>
             <ul>
-                <li v-for="todo,idx in todos">
+                <li v-for="todo,idx in unCompletedTodos" :key="todo.id">
                     <input type="checkbox" v-model="todo.isCompleted">
                     {{todo.name}}
-                    <button @click="deleteTodoItem(idx)">刪除</button>
+                    <button @click="deleteTodoItem(todo.id)">刪除</button>
+                </li>
+            </ul>
+        </div>
+        <div v-show="completedTodos.length > 0">
+            <h2>已完成</h2>
+            <ul>
+                <li v-for="todo,idx in completedTodos" :key="todo.id">
+                    <input type="checkbox" v-model="todo.isCompleted">
+                    {{todo.name}}
+                    <button @click="deleteTodoItem(todo.id)">刪除</button>
                 </li>
             </ul>
         </div>
@@ -61,12 +72,22 @@
                     });
                     this.input = '';
                 },
-                deleteTodoItem(idx){
-                    console.log(idx);
-                    if(confirm('確認刪除？')){
-                        this.todos.splice(idx,1);
-                    }
+                deleteTodoItem(id){
+                    console.log(id);
+                    return this.todos.filter(data => data.id != id);
+                    // if(confirm('確認刪除？')){
+                    //     // this.todos.splice(idx,1);
+                    //     return this.todos.filter(data => data.id != id);
+                    // }
                 }
+            },
+            computed:{
+                completedTodos(){
+                    return this.todos.filter(data => data.isCompleted === true);
+                },
+                unCompletedTodos(){
+                    return this.todos.filter(data => data.isCompleted === false);
+                },
             }
         }).mount('#app');
     </script>
