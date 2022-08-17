@@ -7,17 +7,34 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/vue@3"></script>
 </head>
 <body>
     <div id="app">
         <nav>
-            <a href="#">購物車</a>
-            <span>{{carts.length}}</span>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">購物車</a>
+                    <span>{{carts.length}}</span>
+                </li>
+            </ul>
         </nav>
         <div class="carts">
             <h2>購物車列表</h2>
-            <div>{{carts}}</div>
+            <a href="#" v-show="carts.length > 0">清空購物車</a>
+            <div>
+                <div v-for="cart in carts" class="row">
+                    <div class="col-3">
+                        <img :src="cart.image" alt="">
+                    </div>
+                    <div class="col-9">
+                        <h4>{{cart.title}}</h4>
+                        <div>{{cart.price}}</div>
+                        <a href="#">移除</a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="container row">
             <div class="col-3" v-for="product,idx in products" :key="product.id">
