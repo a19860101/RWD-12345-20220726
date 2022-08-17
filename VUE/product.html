@@ -22,7 +22,7 @@
         </nav>
         <div class="carts">
             <h2>購物車列表</h2>
-            <a href="#" v-show="carts.length > 0">清空購物車</a>
+            <a href="#" v-show="carts.length > 0" @click="clearCarts()">清空購物車</a>
             <div>
                 <div v-for="cart in carts" class="row">
                     <div class="col-3">
@@ -31,7 +31,7 @@
                     <div class="col-9">
                         <h4>{{cart.title}}</h4>
                         <div>{{cart.price}}</div>
-                        <a href="#">移除</a>
+                        <a href="#" @click="removeCartItem(cart.id)">移除</a>
                     </div>
                 </div>
             </div>
@@ -65,6 +65,16 @@
                 addToCarts(id){
                     let item = this.products.find(data => data.id === id);
                     this.carts.push(item);
+                },
+                clearCarts(){
+                    if(confirm('此動作不可回復!確認清除購物車嗎？')){
+                        this.carts.length = 0;
+                    }
+                },
+                removeCartItem(id){
+                    if(confirm('確認刪除？')){
+                        this.carts = this.carts.filter(data => data.id != id);
+                    }
                 }
             },
             computed:{
