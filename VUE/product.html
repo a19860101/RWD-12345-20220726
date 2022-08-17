@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <script src="https://unpkg.com/vue@3"></script>
+
+</head>
+<body>
+    <div id="app">
+        <div class="container row">
+            <div class="col-3" v-for="product in products">
+                <div>
+                    <h3>{{product.title}}</h3>
+                    <div>{{product.price}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    products:[],
+                }
+            },
+            created(){
+                const url = 'https://fakestoreapi.com/products';
+                fetch(url)
+                .then(res=>res.json())
+                .then(data=>{
+                    this.products = data;
+                })
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

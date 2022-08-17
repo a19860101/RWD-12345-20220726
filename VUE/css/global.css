@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Rajdhani:wght@400;700&display=swap');
+:root {
+    --blue:#226fce;
+    --lightblue: #e8f8ff;
+    --orange: #fa0;
+    --teal: #28c3b1;
+    --gray: #a7a7a7;
+    --spacing: .5rem;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Rajdhani','Noto Sans TC','sans-serif';
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+}
+h2 {
+    font-size: 2.5rem;
+}
+
+li {
+    list-style: none;
+    list-style-position: outside;
+}
+
