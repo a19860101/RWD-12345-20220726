@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="input">
+        <input type="text" v-model="input" v-on:keyup.enter="test()">
         <div>
             <input type="radio" name="gender" v-model="gender" value="男">
             <label for="">男</label>
@@ -18,7 +18,7 @@
 
             <div>{{gender}}</div>
         </div>
-        <button>click</button>
+        <button @click="test()">click</button>
         <div>{{input}}</div>
     </div>
     <script>
@@ -27,6 +27,11 @@
                 return {
                     input: 'hello',
                     gender: '尚未選擇性別'
+                }
+            },
+            methods:{
+                test(){
+                    alert(this.input);
                 }
             }
         }).mount('#app');
