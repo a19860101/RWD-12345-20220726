@@ -74,11 +74,10 @@
                 },
                 deleteTodoItem(id){
                     console.log(id);
-                    return this.todos.filter(data => data.id != id);
-                    // if(confirm('確認刪除？')){
-                    //     // this.todos.splice(idx,1);
-                    //     return this.todos.filter(data => data.id != id);
-                    // }
+                    if(confirm('確認刪除？')){
+                            // this.todos.splice(idx,1);
+                        this.todos = this.todos.filter(data => data.id != id);
+                    }
                 }
             },
             computed:{
