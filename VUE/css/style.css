@@ -22,11 +22,15 @@ nav {
     top: 0;
     z-index: 999;
     padding: 10px;
-
+    opacity: 0;
     transform: translateX(100%);
+    transition-property: transform, opacity;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
 }
 .carts.active {
     transform: translateX(0);
+    opacity: 1;
 }
 .carts .close {
     position: absolute;

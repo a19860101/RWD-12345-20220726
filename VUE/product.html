@@ -16,16 +16,16 @@
         <nav>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link cart-toggle">
+                    <a href="#" class="nav-link cart-toggle" @click="isOpen = true">
                         <i class="fa-solid fa-bag-shopping fa-xl"></i>
                     </a>
                     <span>{{carts.length}}</span>
                 </li>
             </ul>
         </nav>
-        <div class="carts">
+        <div class="carts" :class="{active:isOpen}">
             <h2>購物車列表</h2>
-            <i class="fa-solid fa-xmark fa-2x close"></i>
+            <i class="fa-solid fa-xmark fa-2x close" @click="isOpen = false"></i>
             <a href="#" v-show="carts.length > 0" @click="clearCarts()">清空購物車</a>
             <div>
                 <div v-for="cart,idx in carts" class="row">
@@ -69,6 +69,7 @@
                 return {
                     products:[],
                     carts:[],
+                    isOpen: false
                 }
             },
             methods:{
@@ -86,7 +87,7 @@
                         // this.carts = this.carts.filter(data => data.id != id);
                         this.carts.splice(idx,1);
                     }
-                }
+                },
             },
             computed:{
                 priceArray(){
