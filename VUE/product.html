@@ -22,18 +22,22 @@
         </nav>
         <div class="carts">
             <h2>購物車列表</h2>
+
             <a href="#" v-show="carts.length > 0" @click="clearCarts()">清空購物車</a>
             <div>
-                <div v-for="cart in carts" class="row">
+                <div v-for="cart,idx in carts" class="row">
                     <div class="col-3">
                         <img :src="cart.image" alt="">
                     </div>
                     <div class="col-9">
                         <h4>{{cart.title}}</h4>
                         <div>{{cart.price}}</div>
-                        <a href="#" @click="removeCartItem(cart.id)">移除</a>
+                        <a href="#" @click="removeCartItem(idx)">移除</a>
                     </div>
                 </div>
+            </div>
+            <div>
+                {{total}}
             </div>
         </div>
         <div class="container row">
@@ -71,14 +75,22 @@
                         this.carts.length = 0;
                     }
                 },
-                removeCartItem(id){
+                removeCartItem(idx){
                     if(confirm('確認刪除？')){
-                        this.carts = this.carts.filter(data => data.id != id);
+                        // this.carts = this.carts.filter(data => data.id != id);
+                        this.carts.splice(idx,1);
                     }
                 }
             },
             computed:{
-                
+                priceArray(){
+                    return this.carts.map(data => data.price);
+                },
+                total(){
+                    if(this.priceArray.length > 0){
+                        return this.priceArray.reduce((a,b)=>a+b);
+                    }
+                }
             },
             created(){
                 const url = 'https://fakestoreapi.com/products';
