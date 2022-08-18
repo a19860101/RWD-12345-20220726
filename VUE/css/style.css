@@ -10,7 +10,9 @@ nav {
 .nav-link {
     color: #fff;
 }
-
+.nav-menu {
+    margin-left: auto;
+}
 .carts {
     position: fixed;
     width: 400px;
@@ -21,4 +23,14 @@ nav {
     z-index: 999;
     padding: 10px;
 
+    transform: translateX(100%);
+}
+.carts.active {
+    transform: translateX(0);
+}
+.carts .close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
 }

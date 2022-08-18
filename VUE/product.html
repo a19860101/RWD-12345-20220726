@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <script src="https://unpkg.com/vue@3"></script>
 </head>
 <body>
@@ -15,14 +16,16 @@
         <nav>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">購物車</a>
+                    <a href="#" class="nav-link cart-toggle">
+                        <i class="fa-solid fa-bag-shopping fa-xl"></i>
+                    </a>
                     <span>{{carts.length}}</span>
                 </li>
             </ul>
         </nav>
         <div class="carts">
             <h2>購物車列表</h2>
-
+            <i class="fa-solid fa-xmark fa-2x close"></i>
             <a href="#" v-show="carts.length > 0" @click="clearCarts()">清空購物車</a>
             <div>
                 <div v-for="cart,idx in carts" class="row">
@@ -36,8 +39,11 @@
                     </div>
                 </div>
             </div>
-            <div>
-                {{total}}
+            <hr>
+            <div v-show="carts.length>0">
+                總金額:{{total}}
+                <br>
+                <a href="#">結帳</a>
             </div>
         </div>
         <div class="container row">
