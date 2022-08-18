@@ -6,18 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .content {
+            transition: 500ms;
+        }
+        .active {
+            color: red;
+            background-color: #098;
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
-    <h1 id="title">title</h1>
-    <p class="content">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae soluta, iure, vero fugit amet itaque qui architecto molestias, et magni dolorum quod accusamus. Tempora sint quaerat blanditiis consectetur numquam cupiditate.
-    </p>
     <script>
-        $('#title').css({
-            'color':'red',
-            'background-color': '#098'
-            // backgroundColor: 'gray'
+        $(function(){
+            $('#add').click(function(){
+                $('.content').addClass('active');
+            });
+            $('#remove').click(function(){
+                $('.content').removeClass('active');
+            });
+            $('#toggle').click(function(){
+                $('.content').toggleClass('active');
+            });
         })
     </script>
+
+    <button id="add">add</button>
+    <button id="remove">remove</button>
+    <button id="toggle">toggle</button>
+    <div class="content">
+        <h1 id="title">title</h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae soluta, iure, vero fugit amet itaque qui architecto molestias, et magni dolorum quod accusamus. Tempora sint quaerat blanditiis consectetur numquam cupiditate.
+        </p>
+    </div>
+    
 </body>
 </html>
