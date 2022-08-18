@@ -38,14 +38,21 @@
 </head>
 <body>
     <div id="app">
-        <select name="" id="" v-model="selected">
+        
+        <select name="" id="" v-model="placeSelected">
+            <template v-for="p in place">
+                <option :value="p">{{p}}</option>
+            </template>
+        </select>
+        <select name="" id="" v-model="kindSelected">
             <template v-for="k in kind">
                 <option :value="k">{{k}}</option>
             </template>
         </select>
-        {{filterPets}}
+        <button @click="filterPets()">篩選</button>
         <div class="container">
-            <div class="pet-item" v-for="pet,idx in filterPets">
+            <div v-show="results.length === 0">沒有領養動物</div>
+            <div class="pet-item" v-for="pet,idx in results">
                 <div>
                     <div class="pet-img">
                         <template v-if="pet.album_file != ''">
@@ -68,20 +75,26 @@
             data(){
                 return {
                     pets:[],
-                    selected:'',
+                    kindSelected:'',
+                    placeSelected:'',
+                    results:[]
                 }
             },
             methods:{
-
+                filterPets(){
+                    this.results = this.pets.filter(data=>data.animal_place === this.placeSelected).filter(data => data.animal_kind === this.kindSelected);
+                }
             },
             computed:{
                 kind(){
                     let kinds = this.pets.map(data=>data.animal_kind);
                     return [...new Set(kinds)];
                 },
-                filterPets(){
-                    return this.pets.filter(data => data === this.selected);
-                }
+                place(){
+                    let places = this.pets.map(data=>data.animal_place);
+                    return [...new Set(places)]
+                },
+                
             },
             created(){
                 const url = 'https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL';
