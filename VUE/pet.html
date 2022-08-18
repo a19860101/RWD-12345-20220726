@@ -38,9 +38,14 @@
 </head>
 <body>
     <div id="app">
-        {{kind}}
+        <select name="" id="" v-model="selected">
+            <template v-for="k in kind">
+                <option :value="k">{{k}}</option>
+            </template>
+        </select>
+        {{filterPets}}
         <div class="container">
-            <div class="pet-item" v-for="pet,idx in pets">
+            <div class="pet-item" v-for="pet,idx in filterPets">
                 <div>
                     <div class="pet-img">
                         <template v-if="pet.album_file != ''">
@@ -62,12 +67,20 @@
         Vue.createApp({
             data(){
                 return {
-                    pets:[]
+                    pets:[],
+                    selected:'',
                 }
+            },
+            methods:{
+
             },
             computed:{
                 kind(){
-                    return this.pets.map(data=>data.animal_kind);
+                    let kinds = this.pets.map(data=>data.animal_kind);
+                    return [...new Set(kinds)];
+                },
+                filterPets(){
+                    return this.pets.filter(data => data === this.selected);
                 }
             },
             created(){
