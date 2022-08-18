@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        img {
+            width: 100%;
+        }
+        .pet-item{
+            flex: 0 0 25%;
+            padding: 15px;
+        }
+        .pet-img {
+            aspect-ratio: 4/3;
+        }
+        .pet-img img {
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        {{kind}}
+        <div class="container">
+            <div class="pet-item" v-for="pet,idx in pets">
+                <div>
+                    <div class="pet-img">
+                        <template v-if="pet.album_file != ''">
+                            <img :src="pet.album_file" alt="" >
+                        </template>
+                        <template v-else>
+                            <img src="https://picsum.photos/id/23/300" alt="">
+                        </template>
+                    </div>
+                    <div>
+                        <h3>{{pet.animal_Variety}}</h3>
+                        <div>{{pet.animal_place}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    pets:[]
+                }
+            },
+            computed:{
+                kind(){
+                    return this.pets.map(data=>data.animal_kind);
+                }
+            },
+            created(){
+                const url = 'https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL';
+                fetch(url)
+                .then(res=>res.json())
+                .then(data=>{
+                    this.pets = data;
+                    console.log(data);
+                })
+            }
+        }).mount('#app')
+        /* 
+            album_file: ""
+            album_update: ""
+            animal_Variety: "混種狗"
+            animal_age: ""
+            animal_area_pkid: 3
+            animal_bacterin: "F"
+            animal_bodytype: "SMALL"
+            animal_caption: ""
+            animal_closeddate: "2999-12-31"
+            animal_colour: "黑色"
+            animal_createtime: "2022/08/18"
+            animal_foundplace: "詩朗路"
+            animal_id: 270368
+            animal_kind: "狗"
+            animal_opendate: "2022-08-21"
+            animal_place: "新北市板橋區公立動物之家"
+            animal_remark: ""
+            animal_sex: "M"
+            animal_shelter_pkid: 50
+            animal_status: "OPEN"
+            animal_sterilization: "T"
+            animal_subid: "AAADG2022081803"
+            animal_title: ""
+            animal_update: "2022/08/18"
+            cDate: "2022/08/18"
+            shelter_address: "新北市板橋區板城路28-1號"
+            shelter_name: "新北市板橋區公立動物之家"
+            shelter_tel: "02-89662158"
+        */
+    </script>
+</body>
+</html>
