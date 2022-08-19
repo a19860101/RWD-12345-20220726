@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI';
+        }
+        .tab {
+            width: 600px;
+            margin-inline: auto;
+            position: relative;
+        }
+        .tab-nav {
+            background-color: #222;
+            display: flex;
+            position: relative;
+            z-index: 10;
+        }
+        .tab-link {
+            text-decoration: none;
+            display: block;
+            color: #eee;
+            padding-inline: 20px;
+            padding-block: 10px;
+            transition: 400ms;
+        }
+        .tab-link.active {
+            background-color: #eaff9c;
+            color: #232;
+        }
+        .tab-panel {
+            background-color: #eaff9c;
+            padding: 15px;
+            position: absolute;
+            /* display: none; */
+            visibility: hidden;
+            transition-property: opacity,transform;
+            transition-duration: 800ms;
+            transform: translateY(-4%);
+            opacity: 0;
+        }
+        .tab-panel.active {
+            /* display: block; */
+            visibility:visible;
+            opacity: 1;
+            transform: translateY(0);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab-nav">
+            <a href="#panel-1" data-panel="#panel-1" class="tab-link active">Tab 1</a>
+            <a href="#panel-2" data-panel="#panel-2" class="tab-link">Tab 2</a>
+            <a href="#panel-3" data-panel="#panel-3" class="tab-link">Tab 3</a>
+        </div>
+        <div class="tab-panel active" id="panel-1">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestiae modi, tempore sunt inventore velit iusto! Reiciendis repellendus, aliquid excepturi beatae placeat quis, laborum sequi quisquam architecto, atque unde libero?
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium recusandae eos repudiandae impedit ratione, quidem, placeat enim quia facere veritatis nulla harum asperiores, neque maxime odit doloremque consequuntur odio quam?
+            </p>
+        </div>
+        <div class="tab-panel" id="panel-2">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestiae modi, tempore sunt inventore velit iusto! Reiciendis repellendus, aliquid excepturi beatae placeat quis, laborum sequi quisquam architecto, atque unde libero?
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium recusandae eos repudiandae impedit ratione, quidem, placeat enim quia facere veritatis nulla harum asperiores, neque maxime odit doloremque consequuntur odio quam?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestiae modi, tempore sunt inventore velit iusto! Reiciendis repellendus, aliquid excepturi beatae placeat quis, laborum sequi quisquam architecto, atque unde libero?
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium recusandae eos repudiandae impedit ratione, quidem, placeat enim quia facere veritatis nulla harum asperiores, neque maxime odit doloremque consequuntur odio quam?
+            </p>
+        </div>
+        <div class="tab-panel" id="panel-3">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestiae modi, tempore sunt inventore velit iusto! Reiciendis repellendus, aliquid excepturi beatae placeat quis, laborum sequi quisquam architecto, atque unde libero?
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium recusandae eos repudiandae impedit ratione, quidem, placeat enim quia facere veritatis nulla harum asperiores, neque maxime odit doloremque consequuntur odio quam?
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium recusandae eos repudiandae impedit ratione, quidem, placeat enim quia facere veritatis nulla harum asperiores, neque maxime odit doloremque consequuntur odio quam?
+            </p>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.tab-link').click(function(){
+                // let panel = $(this).data('panel');
+                $('.tab-link').removeClass('active');
+                $(this).addClass('active');
+
+                let panel = $(this).attr('href');
+                console.log(panel);
+                $('.tab-panel').removeClass('active');
+                $(panel).addClass('active');
+            })
+        })
+        // javascript
+        // const tabLinks = document.querySelectorAll('.tab-link');
+        // for(let tabLink of tabLinks){
+        //     tabLink.onclick = e => {
+        //         document.querySelector('.tab-link.active').classList.remove('active');
+        //         e.target.classList.add('active');
+        //         let href = e.target.getAttribute('href');
+        //         let panel = e.target.dataset.panel;
+        //         document.querySelector('.tab-panel.active').classList.remove('active');
+        //         document.querySelector(panel).classList.add('active');
+        //     }
+        // }
+    </script>
+</body>
+</html>
