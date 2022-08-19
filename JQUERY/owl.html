@@ -39,8 +39,26 @@
     </style>
     <script>
         $(function(){
-            $('.slider').owlCarousel();
-            $('.products').owlCarousel();
+            $('.slider').owlCarousel({
+                items: 1,
+                dots: true,
+                nav: true,
+                autoplay: true,
+                loop: true,
+                autoplayTimeout: 3000,
+                autoplaySpeed: 1200,
+                navSpeed: 600,
+                dotsSpeed: 600,
+                center: false,
+                stagePadding: 50
+            });
+            $('.products').owlCarousel({
+                items: 6,
+                margin: 10,
+                center: true,
+                loop: true,
+                autoplay: true
+            });
         })
     </script>
 </head>
