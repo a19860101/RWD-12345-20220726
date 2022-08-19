@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             background-color: #ff7d7d;
@@ -19,9 +19,6 @@
         }
         img {
             width: 100%;
-        }
-        .products img {
-            margin-inline: 10px
         }
         .slider-item {
             position: relative;
@@ -42,27 +39,14 @@
     </style>
     <script>
         $(function(){
-            $('.slider').slick({
-                autoplay: false,
-                dots: true,
-                arrows: false,
-                autoplaySpeed: 6000,
-                speed: 1500,
-                centerMode: false,
-                centerPadding: '200px',
-                fade: true
-            });
-            $('.products').slick({
-                slidesToShow: 5,
-                // slidesToScroll: 5,
-                autoplay: true
-            })
+            $('.slider').owlCarousel();
+            $('.products').owlCarousel();
         })
     </script>
 </head>
 <body>
     <header>
-        <div class="slider">
+        <div class="slider owl-carousel owl-theme">
             <div class="slider-item">
                 <img src="https://picsum.photos/1600/800?random=1" alt="">
                 <div class="slider-caption">
@@ -119,7 +103,7 @@
             </div>
         </div>
     </header>
-    <div class="products">
+    <div class="products owl-carousel owl-theme">
         <img src="https://picsum.photos/400?random=1" alt="">
         <img src="https://picsum.photos/400?random=2" alt="">
         <img src="https://picsum.photos/400?random=3" alt="">
