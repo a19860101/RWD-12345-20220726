@@ -14,7 +14,8 @@
             background-color: #ff7d7d;
         }
         .slider,.products {
-            width: 1200px;
+            width: 90%;
+            max-width: 1200px;
             margin-inline: auto;
         }
         img {
@@ -45,17 +46,49 @@
             $('.slider').slick({
                 autoplay: false,
                 dots: true,
-                arrows: false,
+                arrows: true,
                 autoplaySpeed: 6000,
                 speed: 1500,
-                centerMode: false,
-                centerPadding: '200px',
-                fade: true
+                centerMode: true,
+                centerPadding: '100px',
+                fade: false,
+                responsive:[
+                    {
+                        breakpoint: 1200,
+                        settings:{
+                            dots: true,
+                            arrows: false,
+                            centerPadding: '50px',
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings:{
+                            dots: false,
+                            arrows: false,
+                            centerPadding: '0',
+                        }
+                    }
+                ]
             });
             $('.products').slick({
-                slidesToShow: 5,
+                slidesToShow: 6,
                 // slidesToScroll: 5,
-                autoplay: true
+                autoplay: true,
+                responsive:[
+                    {
+                        breakpoint: 1200,
+                        settings:{
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings:{
+                            slidesToShow: 2
+                        }
+                    },
+                ]
             })
         })
     </script>
