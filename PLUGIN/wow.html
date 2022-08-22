@@ -97,11 +97,24 @@
             border:2px solid #222;
             display: none;
         }
+        nav a {
+            transition-property:background-color,color;
+            transition-duration: 500ms;
+            padding-block: 12px;
+            border-radius: 6px;
 
+        }
+        nav a.active {
+            background-color: #f4e085;
+            color: #000;
+            
+        }
     </style>
 </head>
 <body>
     <nav>
+        
+        <a href="#" class="active">Home</a>
         <a href="#section-1">Section 1</a>
         <a href="#section-2">Section 2</a>
         <a href="#section-3">Section 3</a>
@@ -191,6 +204,11 @@
     <script>
         new WOW().init();
         $(function(){
+            console.log($('#section-1').offset().top)
+            // $('nav a').click(function(){
+            //     $('nav a').removeClass('active');
+            //     $(this).addClass('active');
+            // })
             $(window).scroll(function(){
                 let h = $(window).scrollTop();
                 console.log(h);
@@ -199,6 +217,21 @@
                 }else{
                     $('.gotop').fadeOut();
                 }
+
+                $('nav a').each(function(){
+                    let href = $(this).attr('href');
+                    let distance;
+                    if(href === '#'){
+                        distance = 0;
+                    }else{
+                        distance = $(href).offset().top;
+                    }
+
+                    if(h >= distance - 100){
+                        $('nav a.active').removeClass('active');
+                        $(this).addClass('active');
+                    }
+                })
             });
         })
     </script>
