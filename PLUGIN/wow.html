@@ -12,6 +12,9 @@
             box-sizing: border-box;
             font-family: 'Segoe UI';
         }
+        html {
+            scroll-behavior: smooth;
+        }
         nav {
             position: fixed;
             width: 100%;
@@ -75,14 +78,33 @@
         .header-content h1 {
             font-size: 5rem;
         }
-
+        .gotop {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background-color: #222;
+            text-decoration: none;
+            color: #eee;
+            z-index: 999;
+            right: 30px;
+            bottom: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            border:2px solid #222;
+            transition: 500ms;
+        }
+        .gotop:hover {
+            background-color: #eee;
+            color: #293462;
+        }
     </style>
 </head>
 <body>
     <nav>
-        <a href="#">link 1</a>
-        <a href="#">link 2</a>
-        <a href="#">link 3</a>
+        <a href="#section-1">Section 1</a>
+        <a href="#section-2">Section 2</a>
+        <a href="#section-3">Section 3</a>
     </nav>
     <header>
         <img src="https://picsum.photos/id/12/1600/1000" alt="">
@@ -91,7 +113,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, adipisci.</p>
         </div>
     </header>
-    <section>
+    <section id="section-1">
         <div class="container">
             <div class="box">
                 <h2>title</h2>
@@ -113,7 +135,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="section-2">
         <div class="container">
             <div class="box">
                 <h2>title</h2>
@@ -141,7 +163,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="section-3">
         <div class="container">
             <div class="box">
                 <h2>title</h2>
@@ -163,5 +185,8 @@
             </div>
         </div>
     </section>
+    <a href="#" class="gotop">
+        TOP
+    </a>
 </body>
 </html>
