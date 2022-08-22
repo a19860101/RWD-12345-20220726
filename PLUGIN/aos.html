@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI';
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        nav {
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            text-align: center;
+            background-color: rgb(41 52 97 / .8);
+            backdrop-filter: blur(6px);
+            line-height: 70px;
+            z-index: 999;
+        }
+        nav a {
+            padding-inline: 15px;
+            text-decoration: none;
+            color: #eee;
+        }
+        section {
+            width: 100%;
+        }
+        .container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            width: 1200px;
+            margin-inline:auto;
+        }
+        .box {
+            padding: 15px;
+        }
+        section:nth-of-type(1){
+            background-color: #FEDB39;
+        }
+        section:nth-of-type(2){
+            background-color: #1CD6CE;
+        }
+        section:nth-of-type(3){
+            background-color: #D61C4E;
+        }
+        header {
+            width: 100%;
+            position: relative;
+            height: 100vh;
+        }
+        header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .header-content {
+            position: absolute;
+            width: fit-content;
+            height: fit-content;
+            background-color: rgb(255 255 255 / .3);
+            inset:0;
+            margin: auto;
+            text-align: center;
+            padding: 30px;
+            backdrop-filter: blur(6px);
+            border-radius: 6px;
+            font-size: 24px;
+        }
+        .header-content h1 {
+            font-size: 5rem;
+        }
+        .gotop {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background-color: #222;
+            text-decoration: none;
+            color: #eee;
+            z-index: 999;
+            right: 30px;
+            bottom: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            border:2px solid #222;
+            display: none;
+        }
+        nav a {
+            transition-property:background-color,color;
+            transition-duration: 500ms;
+            padding-block: 12px;
+            border-radius: 6px;
+
+        }
+        nav a.active {
+            background-color: #f4e085;
+            color: #000;
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        
+        <a href="#" class="active">Home</a>
+        <a href="#section-1">Section 1</a>
+        <a href="#section-2">Section 2</a>
+        <a href="#section-3">Section 3</a>
+    </nav>
+    <header>
+        <img src="https://picsum.photos/id/12/1600/1000" alt="">
+        <div class="header-content" data-aos-delay="300" data-aos="fade-up">
+            <h1 data-aos="fade-up" data-aos-delay="600">HELLO WOW!</h1>
+            <p data-aos="fade-up" data-aos-delay="900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, adipisci.</p>
+        </div>
+    </header>
+    <section id="section-1">
+        <div class="container">
+            <div class="box" data-aos="fade-down">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
+                </p>
+            </div>
+            <div class="box" data-aos="fade-down" data-aos-delay="500">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
+                </p>
+            </div>
+            <div class="box" data-aos="fade-down" data-aos-delay="1000">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="section-2">
+        <div class="container">
+            <div class="box" data-aos="zoom-in">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
+                </p>
+            </div>
+            <div class="box" data-aos="zoom-in" data-aos-delay="300">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
+                </p>
+            </div>
+            <div class="box" data-aos="zoom-in" data-aos-delay="600">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
+                </p>
+            </div>
+            <div class="box" data-aos="zoom-in" data-aos-delay="900">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="section-3">
+        <div class="container">
+            <div class="box" data-aos="flip-left">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
+                </p>
+            </div>
+            <div class="box" data-aos="flip-left" data-aos-delay="300">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
+                </p>
+            </div>
+            <div class="box" data-aos="flip-left" data-aos-delay="600">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
+                </p>
+            </div>
+        </div>
+    </section>
+    <a href="#" class="gotop">
+        TOP
+    </a>
+    <script>
+        AOS.init();
+        $(function(){
+            console.log($('#section-1').offset().top)
+            $(window).scroll(function(){
+                let h = $(window).scrollTop();
+                console.log(h);
+                if(h > 400){
+                    $('.gotop').fadeIn();
+                }else{
+                    $('.gotop').fadeOut();
+                }
+
+                $('nav a').each(function(){
+                    let href = $(this).attr('href');
+                    let distance;
+                    if(href === '#'){
+                        distance = 0;
+                    }else{
+                        distance = $(href).offset().top;
+                    }
+
+                    if(h >= distance - 100){
+                        $('nav a.active').removeClass('active');
+                        $(this).addClass('active');
+                    }
+                })
+            });
+        })
+    </script>
+</body>
+</html>
