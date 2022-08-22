@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css" integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
@@ -109,26 +110,26 @@
     </nav>
     <header>
         <img src="https://picsum.photos/id/12/1600/1000" alt="">
-        <div class="header-content">
-            <h1 class="animated headShake infinite faster">HELLO WOW!</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, adipisci.</p>
+        <div class="header-content wow fadeIn" data-wow-delay=".5s">
+            <h1 class="wow fadeIn" data-wow-delay="1s">HELLO WOW!</h1>
+            <p class="wow fadeIn" data-wow-delay="1.5s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, adipisci.</p>
         </div>
     </header>
     <section id="section-1">
         <div class="container">
-            <div class="box">
+            <div class="box wow fadeInUp">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
                 </p>
             </div>
-            <div class="box">
+            <div class="box wow fadeInUp" data-wow-delay=".5s">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
                 </p>
             </div>
-            <div class="box">
+            <div class="box wow fadeInUp" data-wow-delay="1s">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
@@ -138,25 +139,25 @@
     </section>
     <section id="section-2">
         <div class="container">
-            <div class="box">
+            <div class="box wow zoomIn" data-wow-delay="0s">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
                 </p>
             </div>
-            <div class="box">
+            <div class="box wow zoomIn" data-wow-delay="0.3s">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
                 </p>
             </div>
-            <div class="box">
+            <div class="box wow zoomIn" data-wow-delay="0.6s">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
                 </p>
             </div>
-            <div class="box">
+            <div class="box wow zoomIn" data-wow-delay="0.9s">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
@@ -166,19 +167,19 @@
     </section>
     <section id="section-3">
         <div class="container">
-            <div class="box">
+            <div class="box wow flipInY" data-wow-delay="0s">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
                 </p>
             </div>
-            <div class="box">
+            <div class="box wow flipInY" data-wow-delay="0.5s">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
                 </p>
             </div>
-            <div class="box">
+            <div class="box wow flipInY" data-wow-delay="1s">
                 <h2>title</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem veniam, natus vitae necessitatibus quos similique aut impedit incidunt molestiae esse fugit aliquam voluptate tempora ex optio, velit officiis labore corrupti!
@@ -189,5 +190,8 @@
     <a href="#" class="gotop">
         TOP
     </a>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>
