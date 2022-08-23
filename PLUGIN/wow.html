@@ -8,113 +8,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css" integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI';
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        nav {
-            position: fixed;
-            width: 100%;
-            height: 70px;
-            text-align: center;
-            background-color: rgb(41 52 97 / .8);
-            backdrop-filter: blur(6px);
-            line-height: 70px;
-            z-index: 999;
-        }
-        nav a {
-            padding-inline: 15px;
-            text-decoration: none;
-            color: #eee;
-        }
-        section {
-            width: 100%;
-        }
-        .container {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            width: 1200px;
-            margin-inline:auto;
-        }
-        .box {
-            padding: 15px;
-        }
-        section:nth-of-type(1){
-            background-color: #FEDB39;
-        }
-        section:nth-of-type(2){
-            background-color: #1CD6CE;
-        }
-        section:nth-of-type(3){
-            background-color: #D61C4E;
-        }
-        header {
-            width: 100%;
-            position: relative;
-            height: 100vh;
-        }
-        header img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .header-content {
-            position: absolute;
-            width: fit-content;
-            height: fit-content;
-            background-color: rgb(255 255 255 / .3);
-            inset:0;
-            margin: auto;
-            text-align: center;
-            padding: 30px;
-            backdrop-filter: blur(6px);
-            border-radius: 6px;
-            font-size: 24px;
-        }
-        .header-content h1 {
-            font-size: 5rem;
-        }
-        .gotop {
-            position: fixed;
-            width: 50px;
-            height: 50px;
-            background-color: #222;
-            text-decoration: none;
-            color: #eee;
-            z-index: 999;
-            right: 30px;
-            bottom: 30px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 50px;
-            border:2px solid #222;
-            display: none;
-        }
-        nav a {
-            transition-property:background-color,color;
-            transition-duration: 500ms;
-            padding-block: 12px;
-            border-radius: 6px;
-
-        }
-        nav a.active {
-            background-color: #f4e085;
-            color: #000;
-            
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        
+    <nav class="nav">
         <a href="#" class="active">Home</a>
+        <a href="#section-1">Section 1</a>
+        <a href="#section-2">Section 2</a>
+        <a href="#section-3">Section 3</a>
+    </nav>
+    <nav class="mobile-nav">
+        <a href="#" class="nav-toggle">
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </a>
+        <a href="#">Home</a>
         <a href="#section-1">Section 1</a>
         <a href="#section-2">Section 2</a>
         <a href="#section-3">Section 3</a>
@@ -209,6 +117,9 @@
             //     $('nav a').removeClass('active');
             //     $(this).addClass('active');
             // })
+            $('.nav-toggle').click(function(){
+                $('.mobile-nav').toggleClass('active')
+            })
             $(window).scroll(function(){
                 let h = $(window).scrollTop();
                 console.log(h);
