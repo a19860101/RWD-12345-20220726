@@ -24,9 +24,11 @@
             object-fit: cover;
             object-position: center;
         }
+
         .tab-panel {
             display: none;
         }
+
         .tab-panel.active {
             display: block;
         }
@@ -59,12 +61,32 @@
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="" class="nav-link">Login</a>
+                        <a href="#offcanvasExample" class="nav-link" data-bs-toggle="offcanvas">Login</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">登入</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <form action="">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="帳號">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="密碼">
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="登入">
+                </form>
+            </div>
+            
+        </div>
+    </div>
     <header>
         <div id="slider" class="carousel slide" data-bs-ride="false">
             <div class="carousel-indicators">
@@ -366,15 +388,21 @@
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                   <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore dolore sunt possimus repellendus nam, voluptatem tempora ea quos unde odit aliquid quibusdam odio doloremque tempore eaque consequuntur esse exercitationem laborum.
-                                   </p>
-                                   <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non laborum enim rem sequi. Praesentium molestias fuga labore delectus commodi aspernatur. Fugiat atque enim quidem ea qui deserunt corrupti repudiandae numquam.
-                                   </p>
-                                   <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. In expedita, aut tempore illum veniam perferendis odit, beatae inventore impedit porro dolor, incidunt libero voluptatum a laudantium assumenda unde asperiores nesciunt.
-                                   </p>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore dolore sunt
+                                        possimus repellendus nam, voluptatem tempora ea quos unde odit aliquid quibusdam
+                                        odio doloremque tempore eaque consequuntur esse exercitationem laborum.
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non laborum enim rem
+                                        sequi. Praesentium molestias fuga labore delectus commodi aspernatur. Fugiat
+                                        atque enim quidem ea qui deserunt corrupti repudiandae numquam.
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In expedita, aut
+                                        tempore illum veniam perferendis odit, beatae inventore impedit porro dolor,
+                                        incidunt libero voluptatum a laudantium assumenda unde asperiores nesciunt.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -419,24 +447,32 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <a href="#" data-bs-target="#collapse-1" data-bs-toggle="collapse" class="btn btn-primary my-3 d-block">collapse</a>
+                    <a href="#" data-bs-target="#collapse-1" data-bs-toggle="collapse"
+                        class="btn btn-primary my-3 d-block">collapse</a>
                     <div id="collapse-1" class="collapse">
                         <div class=" p-4 border border-dark rounded">
 
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem vero similique ducimus repellat neque, et illum, cupiditate obcaecati assumenda blanditiis iure deleniti perferendis officia, quisquam aspernatur fugit possimus veritatis. Tenetur.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem vero similique
+                                ducimus repellat neque, et illum, cupiditate obcaecati assumenda blanditiis iure
+                                deleniti perferendis officia, quisquam aspernatur fugit possimus veritatis. Tenetur.
                             </p>
                         </div>
                     </div>
-                    <a href="#" data-bs-target="#collapse-2" data-bs-toggle="collapse" class="btn btn-primary my-3 d-block">collapse 2</a>
+                    <a href="#" data-bs-target="#collapse-2" data-bs-toggle="collapse"
+                        class="btn btn-primary my-3 d-block">collapse 2</a>
                     <div id="collapse-2" class="collapse">
                         <div class=" p-4 border border-dark rounded">
 
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem vero similique ducimus repellat neque, et illum, cupiditate obcaecati assumenda blanditiis iure deleniti perferendis officia, quisquam aspernatur fugit possimus veritatis. Tenetur.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem vero similique
+                                ducimus repellat neque, et illum, cupiditate obcaecati assumenda blanditiis iure
+                                deleniti perferendis officia, quisquam aspernatur fugit possimus veritatis. Tenetur.
                             </p>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem vero similique ducimus repellat neque, et illum, cupiditate obcaecati assumenda blanditiis iure deleniti perferendis officia, quisquam aspernatur fugit possimus veritatis. Tenetur.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem vero similique
+                                ducimus repellat neque, et illum, cupiditate obcaecati assumenda blanditiis iure
+                                deleniti perferendis officia, quisquam aspernatur fugit possimus veritatis. Tenetur.
                             </p>
                         </div>
                     </div>
@@ -591,11 +627,11 @@
     </section>
     <script>
         let tabLinks = document.querySelectorAll('.nav-tabs .nav-link');
-        for(let tabLink of tabLinks){
+        for (let tabLink of tabLinks) {
             tabLink.onclick = e => {
                 document.querySelector('.nav-tabs .nav-link.active').classList.remove('active');
                 e.target.classList.add('active');
-                let href= e.target.getAttribute('href');
+                let href = e.target.getAttribute('href');
                 document.querySelector('.tab-panel.active').classList.remove('active');
                 document.querySelector(href).classList.add('active');
                 e.preventDefault();
