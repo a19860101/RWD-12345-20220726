@@ -9,24 +9,27 @@
 
 </head>
 <body>
-    <nav class="bg-zinc-900 px-4 py-5 flex justify-between items-center">
+    <nav class="bg-zinc-900/50 px-4 backdrop-blur-md py-5 flex flex-col md:flex-row justify-between md:items-center fixed z-[999] w-full">
         <a href="#" class="text-zinc-50 mr-5 text-2xl font-bold uppercase">Logo</a>
-        <div class="mr-auto space-x-5">
-            <a href="#" class="text-zinc-50">Link</a>
-            <a href="#" class="text-zinc-50">Link</a>
-            <a href="#" class="text-zinc-50">Link</a>
-            <a href="#" class="text-zinc-50">Link</a>
-            <a href="#" class="text-zinc-50">Link</a>
-        </div>
-        <div>
-            <a href="#" class="text-zinc-50">Login</a>
+        <div class="justify-between w-full flex-col md:flex-row hidden md:flex">
+            <div class="mr-auto md:space-x-5 flex md:flex-row flex-col">
+                <a href="#" class="my-3 md:my-0 text-zinc-50">Link</a>
+                <a href="#" class="my-3 md:my-0 text-zinc-50">Link</a>
+                <a href="#" class="my-3 md:my-0 text-zinc-50">Link</a>
+                <a href="#" class="my-3 md:my-0 text-zinc-50">Link</a>
+                <a href="#" class="my-3 md:my-0 text-zinc-50">Link</a>
+            </div>
+            <div class="md:space-x-5 flex md:flex-row flex-col">
+                <a href="#" class="my-3 md:my-0 text-zinc-50">Login</a>
+                <a href="#" class="my-3 md:my-0 text-zinc-50">Register</a>
+            </div>
         </div>
     </nav>
     <header class="relative">
         <img src="https://picsum.photos/id/12/1600/900" alt="" class="w-full">
         <div class="text-center space-y-6 absolute inset-0 m-auto w-fit h-min bg-white/10 backdrop-blur-md p-8 rounded-xl">
-            <h1 class="text-6xl font-bold">HELLO TAILWIND</h1>
-            <p class="w-2/3 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sapiente doloremque eveniet?</p>
+            <h1 class="text-3xl lg:text-6xl font-bold">HELLO TAILWIND</h1>
+            <p class="hidden lg:block w-2/3 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sapiente doloremque eveniet?</p>
             <a href="#" class="inline-block px-4 py-2 rounded-md text-white bg-fuchsia-600 hover:bg-fuchsia-500 duration-300">MORE</a>
         </div>
     </header>
@@ -70,8 +73,8 @@
         </div>
     </section>
     <section class="py-36 bg-rose-100">
-        <div class="container flex mx-auto">
-            <div class="w-1/4 px-4">
+        <div class="container flex mx-auto flex-wrap">
+            <div class="w-1/4 p-4">
                 <div class="border border-solid border-rose-600 rounded-lg overflow-hidden">
                     <div class="aspect-[4/3]">
                         <img src="https://picsum.photos/id/34/1000/800" class="object-cover w-full h-full">
@@ -85,7 +88,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-1/4 px-4">
+            <div class="w-1/4 p-4">
                 <div class="border border-solid border-rose-600 rounded-lg overflow-hidden">
                     <div class="aspect-[4/3]">
                         <img src="https://picsum.photos/id/34/1000/800" class="object-cover w-full h-full">
@@ -99,7 +102,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-1/4 px-4">
+            <div class="w-1/4 p-4">
                 <div class="border border-solid border-rose-600 rounded-lg overflow-hidden">
                     <div class="aspect-[4/3]">
                         <img src="https://picsum.photos/id/34/1000/800" class="object-cover w-full h-full">
@@ -113,7 +116,63 @@
                     </div>
                 </div>
             </div>
-            <div class="w-1/4 px-4">
+            <div class="w-1/4 p-4">
+                <div class="border border-solid border-rose-600 rounded-lg overflow-hidden">
+                    <div class="aspect-[4/3]">
+                        <img src="https://picsum.photos/id/34/1000/800" class="object-cover w-full h-full">
+                    </div>
+                    <div class="p-4 space-y-3">
+                        <h3 class="text-2xl font-bold uppercase">title</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, deleniti.
+                        </p>
+                        <a href="#" class="inline-block bg-rose-700 text-rose-50 px-4 py-1 rounded ring-2 ring-rose-900">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/4 p-4">
+                <div class="border border-solid border-rose-600 rounded-lg overflow-hidden">
+                    <div class="aspect-[4/3]">
+                        <img src="https://picsum.photos/id/34/1000/800" class="object-cover w-full h-full">
+                    </div>
+                    <div class="p-4 space-y-3">
+                        <h3 class="text-2xl font-bold uppercase">title</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, deleniti.
+                        </p>
+                        <a href="#" class="inline-block bg-rose-700 text-rose-50 px-4 py-1 rounded ring-2 ring-rose-900">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/4 p-4">
+                <div class="border border-solid border-rose-600 rounded-lg overflow-hidden">
+                    <div class="aspect-[4/3]">
+                        <img src="https://picsum.photos/id/34/1000/800" class="object-cover w-full h-full">
+                    </div>
+                    <div class="p-4 space-y-3">
+                        <h3 class="text-2xl font-bold uppercase">title</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, deleniti.
+                        </p>
+                        <a href="#" class="inline-block bg-rose-700 text-rose-50 px-4 py-1 rounded ring-2 ring-rose-900">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/4 p-4">
+                <div class="border border-solid border-rose-600 rounded-lg overflow-hidden">
+                    <div class="aspect-[4/3]">
+                        <img src="https://picsum.photos/id/34/1000/800" class="object-cover w-full h-full">
+                    </div>
+                    <div class="p-4 space-y-3">
+                        <h3 class="text-2xl font-bold uppercase">title</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, deleniti.
+                        </p>
+                        <a href="#" class="inline-block bg-rose-700 text-rose-50 px-4 py-1 rounded ring-2 ring-rose-900">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/4 p-4">
                 <div class="border border-solid border-rose-600 rounded-lg overflow-hidden">
                     <div class="aspect-[4/3]">
                         <img src="https://picsum.photos/id/34/1000/800" class="object-cover w-full h-full">
